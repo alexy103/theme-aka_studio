@@ -2855,7 +2855,8 @@ img {
 }
 
 body {
-  background-color: #131412;
+  /* background-color: #131412; */
+  background-color: #7eb447;
   color: #fcfbf5;
   overflow: hidden;
   position: relative;
