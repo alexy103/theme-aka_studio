@@ -1,11 +1,4 @@
-<?php
-/* Template minimal de diagnostic */
-get_header();
-echo '<div style="padding:40px;font:16px/1.4 sans-serif">Thème actif — rendu OK</div>';
-get_footer(); ?>
-
-
-<!-- <?php get_header(); ?>
+<?php get_header(); ?>
 
 <main>
     <section class="home slide">
@@ -564,4 +557,4 @@ get_footer(); ?>
     </section>
 </main>
 
-<?php get_footer(); ?> -->
+<?php get_footer(); ?>
