@@ -4104,21 +4104,5 @@ body {
 }
 
 .slide {
-  background-color: rgb(84, 224, 205) !important;
-}
-
-@supports (height: 100dvh) {
-  main {
-    height: calc(100dvh - (100dvh - (5 * 20px)) / 6);
-  }
-}
-@supports (height: 100svh) {
-  .slide {
-    min-height: calc(100svh - (100svh - (5 * 20px)) / 6);
-  } /* barre déployée */
-}
-@supports (height: 100lvh) {
-  .slide {
-    min-height: calc(100lvh - (100lvh - (5 * 20px)) / 6);
-  } /* barre rétractée = bord à bord */
+  background-color: rgb(84, 110, 224) !important;
 }
