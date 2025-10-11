@@ -4104,5 +4104,6 @@ body {
 }
 
 .slide {
-  background-color: rgb(224, 84, 182) !important;
+  background-color: rgb(224, 152, 84) !important;
+  height: 100% !important;
 }
