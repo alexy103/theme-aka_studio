@@ -352,7 +352,7 @@ img {
   -o-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
   /* background-color: #131412; */
-  background-color: rgb(156, 18, 168) !important;
+  background-color: rgb(48, 99, 90) !important;
 }
 
 .slideTitle {
@@ -4087,6 +4087,10 @@ body {
   color: #fcfbf5;
   position: relative;
   font-family: "Bricolage Light", sans-serif;
+  overflow: hidden !important;
+}
+
+html {
   overflow: hidden !important;
 }
 
