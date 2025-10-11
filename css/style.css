@@ -352,7 +352,7 @@ img {
   -o-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
   /* background-color: #131412; */
-  background-color: rgb(48, 99, 90) !important;
+  background-color: rgb(170, 109, 167) !important;
 }
 
 .slideTitle {
@@ -4095,7 +4095,7 @@ html {
 }
 
 main {
-  height: 100dvh;
+  height: calc(100dvh - (100dvh - (5 * 20px)) / 6);
   width: 100dvw;
   overflow: hidden !important;
 }
