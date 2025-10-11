@@ -4084,7 +4084,7 @@ img {
 body {
   background-color: #131412;
   color: #fcfbf5;
-  overflow: hidden;
+  overflow: hidden !important;
   position: relative;
   font-family: "Bricolage Light", sans-serif;
 }
