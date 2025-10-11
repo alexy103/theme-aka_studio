@@ -4089,17 +4089,36 @@ body {
 }
 
 main {
-  height: calc(100dvh - (100dvh - (5 * 20px)) / 6);
+  height: calc(100vh - (100vh - (5 * 20px)) / 6);
   width: 100dvw;
   overflow: hidden !important;
 }
 
 html,
 body {
+  background: #131412; /* ta couleur de fond par défaut */
   min-height: 100%;
+  height: auto; /* évite un 100% bloquant dans certains cas */
   overflow: hidden !important;
+  padding-bottom: env(safe-area-inset-bottom); /* protège contre la barre iOS */
 }
 
 .slide {
-  background-color: rgb(224, 222, 84) !important;
+  background-color: rgb(84, 224, 205) !important;
+}
+
+@supports (height: 100dvh) {
+  main {
+    height: calc(100dvh - (100dvh - (5 * 20px)) / 6);
+  }
+}
+@supports (height: 100svh) {
+  .slide {
+    min-height: calc(100svh - (100svh - (5 * 20px)) / 6);
+  } /* barre déployée */
+}
+@supports (height: 100lvh) {
+  .slide {
+    min-height: calc(100lvh - (100lvh - (5 * 20px)) / 6);
+  } /* barre rétractée = bord à bord */
 }
