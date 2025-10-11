@@ -758,11 +758,11 @@ img {
     pointer-events: none;
   }
   .reduceNavbar--enter {
-    /* -webkit-animation: reduceNavbar 2s forwards ease-in-out; */
-    /* animation: reduceNavbar 2s forwards ease-in-out; */
+    -webkit-animation: reduceNavbar 2s forwards ease-in-out;
+    animation: reduceNavbar 2s forwards ease-in-out;
   }
   .reduceNavbar--exit {
-    /* animation: reduceNavbar 2s reverse forwards ease-in-out !important; */
+    animation: reduceNavbar 2s reverse forwards ease-in-out !important;
   }
   .reducedNavbar {
     left: 20%;
@@ -1897,8 +1897,8 @@ img {
     min-width: calc((100dvw - 220px) / 12 * 3);
   }
   .about .content--second .content__wrapper .desktopOpinions .opinion.active {
-    /* -webkit-animation: activeIn 1s forwards; */
-    /* animation: activeIn 1s forwards; */
+    -webkit-animation: activeIn 1s forwards;
+    animation: activeIn 1s forwards;
     min-width: calc(calc((100dvw - (11 * 20px)) / 12) * 3);
     margin-top: 0;
     pointer-events: none;
@@ -1912,8 +1912,8 @@ img {
     .desktopOpinions
     .opinion.active
     .opinion__infos {
-    /* -webkit-animation: opinionInfo 1s 1s forwards; */
-    /* animation: opinionInfo 1s 1s forwards; */
+    -webkit-animation: opinionInfo 1s 1s forwards;
+    animation: opinionInfo 1s 1s forwards;
   }
   .about
     .content--second
@@ -2405,18 +2405,18 @@ img {
 
 .work--enter {
   pointer-events: none;
-  /* -webkit-animation: workSlideEnter 2s forwards; */
-  /* animation: workSlideEnter 2s forwards; */
+  -webkit-animation: workSlideEnter 2s forwards;
+  animation: workSlideEnter 2s forwards;
 }
 
 .work--enter .category span {
-  /* -webkit-animation: slideFromRight 2s; */
-  /* animation: slideFromRight 2s; */
+  -webkit-animation: slideFromRight 2s;
+  animation: slideFromRight 2s;
 }
 
 .work--enter .workMenu {
-  /* -webkit-animation: workSlideFromBottom 2s, smallGap 1s 1s; */
-  /* animation: workSlideFromBottom 2s, smallGap 1s 1s; */
+  -webkit-animation: workSlideFromBottom 2s, smallGap 1s 1s;
+  animation: workSlideFromBottom 2s, smallGap 1s 1s;
 }
 
 .work--enter .red {
@@ -2424,8 +2424,8 @@ img {
 }
 
 .work--enter .submenu__active::after {
-  /* -webkit-animation: underline 1s 2s forwards; */
-  /* animation: underline 1s 2s forwards; */
+  -webkit-animation: underline 1s 2s forwards;
+  animation: underline 1s 2s forwards;
 }
 
 .work--enter .hidden-temp {
@@ -2434,24 +2434,24 @@ img {
 
 @media screen and (max-width: 1440px) {
   .work--enter .project {
-    /* -webkit-animation: slideFromRight 2s forwards; */
-    /* animation: slideFromRight 2s forwards; */
+    -webkit-animation: slideFromRight 2s forwards;
+    animation: slideFromRight 2s forwards;
   }
 }
 
 .work--exit .project {
-  /* -webkit-animation: slideToRight 2s; */
-  /* animation: slideToRight 2s; */
+  -webkit-animation: slideToRight 2s;
+  animation: slideToRight 2s;
 }
 
 .work--exit .category span {
-  /* -webkit-animation: slideToRight 2s; */
-  /* animation: slideToRight 2s; */
+  -webkit-animation: slideToRight 2s;
+  animation: slideToRight 2s;
 }
 
 .work--exit .workMenu {
-  /* -webkit-animation: slideToBottom 2s; */
-  /* animation: slideToBottom 2s; */
+  -webkit-animation: slideToBottom 2s;
+  animation: slideToBottom 2s;
 }
 
 .work--exit .submenu__active::after {
@@ -2469,14 +2469,14 @@ img {
 
 .work--inside .aka {
   opacity: 1;
-  /* -webkit-animation: workAkas 1s; */
-  /* animation: workAkas 1s; */
+  -webkit-animation: workAkas 1s;
+  animation: workAkas 1s;
 }
 
 .work--inside .red {
   opacity: 0;
-  /* -webkit-animation: rec 0.5s forwards; */
-  /* animation: rec 0.5s forwards; */
+  -webkit-animation: rec 0.5s forwards;
+  animation: rec 0.5s forwards;
 }
 
 .work--inside .submenu__active::after {
@@ -2484,13 +2484,13 @@ img {
 }
 
 .work--inside .category span.category--exit {
-  /* -webkit-animation: fadeOut 1s forwards; */
-  /* animation: fadeOut 1s forwards; */
+  -webkit-animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards;
 }
 
 .work--inside .category span.category--enter {
-  /* -webkit-animation: fadeIn 1.5s forwards; */
-  /* animation: fadeIn 1.5s forwards; */
+  -webkit-animation: fadeIn 1.5s forwards;
+  animation: fadeIn 1.5s forwards;
 }
 
 .work--inside .workMenu__link::after {
@@ -2508,64 +2508,64 @@ img {
 
 .work--inside .workMenu__link.underline--exit {
   position: relative;
-  /* -webkit-animation: shineOut 1s forwards; */
-  /* animation: shineOut 1s forwards; */
+  -webkit-animation: shineOut 1s forwards;
+  animation: shineOut 1s forwards;
 }
 
 .work--inside .workMenu__link.underline--exit::after {
   width: 100%;
-  /* animation: underline 1s forwards reverse; */
+  animation: underline 1s forwards reverse;
 }
 
 .work--inside .workMenu__link.underline--enter {
   position: relative;
-  /* animation: shineOut 0.5s forwards reverse; */
+  animation: shineOut 0.5s forwards reverse;
 }
 
 .work--inside .workMenu__link.underline--enter::after {
   width: 0;
-  /* -webkit-animation: underline 1s forwards; */
-  /* animation: underline 1s forwards; */
+  -webkit-animation: underline 1s forwards;
+  animation: underline 1s forwards;
 }
 
 .anim {
-  /* -webkit-animation: workSliderExit 1s forwards ease-in; */
-  /* animation: workSliderExit 1s forwards ease-in; */
+  -webkit-animation: workSliderExit 1s forwards ease-in;
+  animation: workSliderExit 1s forwards ease-in;
 }
 
 .anim__reverse {
-  /* -webkit-animation: workSliderEnter 1s forwards ease-out; */
-  /* animation: workSliderEnter 1s forwards ease-out; */
+  -webkit-animation: workSliderEnter 1s forwards ease-out;
+  animation: workSliderEnter 1s forwards ease-out;
 }
 
 .contact .content__title--exit {
-  /* -webkit-animation: slideToTop 1s forwards; */
-  /* animation: slideToTop 1s forwards; */
+  -webkit-animation: slideToTop 1s forwards;
+  animation: slideToTop 1s forwards;
 }
 
 .contact .content__title--enter {
-  /* -webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards; */
-  /* animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards; */
+  -webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
+  animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
 }
 
 .contact .content__text--exit {
-  /* -webkit-animation: fadeOut 0.5s forwards; */
-  /* animation: fadeOut 0.5s forwards; */
+  -webkit-animation: fadeOut 0.5s forwards;
+  animation: fadeOut 0.5s forwards;
 }
 
 .contact .content__text--enter {
-  /* -webkit-animation: fadeIn 2.5s forwards; */
-  /* animation: fadeIn 2.5s forwards; */
+  -webkit-animation: fadeIn 2.5s forwards;
+  animation: fadeIn 2.5s forwards;
 }
 
 .contact .content--form .content__title--exit {
-  /* -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
-  /* animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
+  -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+  animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
 }
 
 .contact--enter {
-  /* -webkit-animation: contactSlideEnter 2s forwards; */
-  /* animation: contactSlideEnter 2s forwards; */
+  -webkit-animation: contactSlideEnter 2s forwards;
+  animation: contactSlideEnter 2s forwards;
   pointer-events: none;
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -2577,23 +2577,23 @@ img {
 }
 
 .contact--enter .submenu__active::after {
-  /* -webkit-animation: underline 1s 2s forwards; */
-  /* animation: underline 1s 2s forwards; */
+  -webkit-animation: underline 1s 2s forwards;
+  animation: underline 1s 2s forwards;
 }
 
 .contact--enter .contactMenu {
-  /* -webkit-animation: workSlideFromBottom 2s, mediumGap 1s 1s; */
-  /* animation: workSlideFromBottom 2s, mediumGap 1s 1s; */
+  -webkit-animation: workSlideFromBottom 2s, mediumGap 1s 1s;
+  animation: workSlideFromBottom 2s, mediumGap 1s 1s;
 }
 
 .contact--enter .content .subtitle {
-  /* -webkit-animation: slideFromLeft 2s forwards; */
-  /* animation: slideFromLeft 2s forwards; */
+  -webkit-animation: slideFromLeft 2s forwards;
+  animation: slideFromLeft 2s forwards;
 }
 
 .contact--enter .content .text {
-  /* -webkit-animation: slideFromLeft 2s 0.25s forwards; */
-  /* animation: slideFromLeft 2s 0.25s forwards; */
+  -webkit-animation: slideFromLeft 2s 0.25s forwards;
+  animation: slideFromLeft 2s 0.25s forwards;
 }
 
 .contact--inside {
@@ -2611,14 +2611,14 @@ img {
 
 .contact--inside .aka {
   opacity: 1;
-  /* -webkit-animation: contactAkas 1s; */
-  /* animation: contactAkas 1s; */
+  -webkit-animation: contactAkas 1s;
+  animation: contactAkas 1s;
 }
 
 .contact--inside .red {
   opacity: 0;
-  /* -webkit-animation: rec 0.5s forwards; */
-  /* animation: rec 0.5s forwards; */
+  -webkit-animation: rec 0.5s forwards;
+  animation: rec 0.5s forwards;
 }
 
 .contact--inside .submenu__active::after {
@@ -2639,39 +2639,39 @@ img {
 
 .contact--inside .contactMenu__link.underline--exit {
   position: relative;
-  /* -webkit-animation: shineOut 1s forwards; */
-  /* animation: shineOut 1s forwards; */
+  -webkit-animation: shineOut 1s forwards;
+  animation: shineOut 1s forwards;
 }
 
 .contact--inside .contactMenu__link.underline--exit::after {
   width: 100%;
-  /* animation: underline 1s forwards reverse; */
+  animation: underline 1s forwards reverse;
 }
 
 .contact--inside .contactMenu__link.underline--enter {
   position: relative;
-  /* animation: shineOut 0.5s forwards reverse; */
+  animation: shineOut 0.5s forwards reverse;
 }
 
 .contact--inside .contactMenu__link.underline--enter::after {
   width: 0;
-  /* -webkit-animation: underline 1s forwards; */
-  /* animation: underline 1s forwards; */
+  -webkit-animation: underline 1s forwards;
+  animation: underline 1s forwards;
 }
 
 .contact--exit .content .subtitle {
-  /* -webkit-animation: slideToLeft 2s forwards; */
-  /* animation: slideToLeft 2s forwards; */
+  -webkit-animation: slideToLeft 2s forwards;
+  animation: slideToLeft 2s forwards;
 }
 
 .contact--exit .content .text {
-  /* -webkit-animation: slideToLeft 2s 0.25s forwards; */
-  /* animation: slideToLeft 2s 0.25s forwards; */
+  -webkit-animation: slideToLeft 2s 0.25s forwards;
+  animation: slideToLeft 2s 0.25s forwards;
 }
 
 .contact--exit .contactMenu {
-  /* -webkit-animation: slideToBottom 2s; */
-  /* animation: slideToBottom 2s; */
+  -webkit-animation: slideToBottom 2s;
+  animation: slideToBottom 2s;
 }
 
 .contact--exit .submenu__active::after {
@@ -2679,136 +2679,136 @@ img {
 }
 
 .contact--exit .aka {
-  /* animation: contactAkas 1s 0.5s reverse; */
+  animation: contactAkas 1s 0.5s reverse;
 }
 
 .about .content__img--exit--right {
-  /* -webkit-animation: slideToRight 1s forwards; */
-  /* animation: slideToRight 1s forwards; */
+  -webkit-animation: slideToRight 1s forwards;
+  animation: slideToRight 1s forwards;
 }
 
 .about .content__img--exit--left {
-  /* -webkit-animation: slideToLeft 1s forwards; */
-  /* animation: slideToLeft 1s forwards; */
+  -webkit-animation: slideToLeft 1s forwards;
+  animation: slideToLeft 1s forwards;
 }
 
 .about .content__img--enter--right {
-  /* -webkit-animation: aboutSlideFromRight 1s forwards, fadeIn 0.75s forwards; */
-  /* animation: aboutSlideFromRight 1s forwards, fadeIn 0.75s forwards; */
+  -webkit-animation: aboutSlideFromRight 1s forwards, fadeIn 0.75s forwards;
+  animation: aboutSlideFromRight 1s forwards, fadeIn 0.75s forwards;
 }
 
 .about .content__img--enter--left {
-  /* -webkit-animation: slideFromLeft 1s forwards, fadeIn 0.75s forwards; */
-  /* animation: slideFromLeft 1s forwards, fadeIn 0.75s forwards; */
+  -webkit-animation: slideFromLeft 1s forwards, fadeIn 0.75s forwards;
+  animation: slideFromLeft 1s forwards, fadeIn 0.75s forwards;
 }
 
 .about .content__text--exit {
-  /* -webkit-animation: fadeOut 1s forwards; */
-  /* animation: fadeOut 1s forwards; */
+  -webkit-animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards;
 }
 
 .about .content__text--enter {
-  /* -webkit-animation: fadeIn 2.5s forwards; */
-  /* animation: fadeIn 2.5s forwards; */
+  -webkit-animation: fadeIn 2.5s forwards;
+  animation: fadeIn 2.5s forwards;
 }
 
 .about .content--friends--enter {
-  /* -webkit-animation: aboutSlideFromRight 1s forwards; */
-  /* animation: aboutSlideFromRight 1s forwards; */
+  -webkit-animation: aboutSlideFromRight 1s forwards;
+  animation: aboutSlideFromRight 1s forwards;
 }
 
 .about .content--friends--exit {
-  /* -webkit-animation: slideToRight 1s forwards; */
-  /* animation: slideToRight 1s forwards; */
+  -webkit-animation: slideToRight 1s forwards;
+  animation: slideToRight 1s forwards;
 }
 
 .about .friendlist--exit {
-  /* -webkit-animation: slideToTop 0.5s forwards, fadeOut 0.5s forwards; */
-  /* animation: slideToTop 0.5s forwards, fadeOut 0.5s forwards; */
+  -webkit-animation: slideToTop 0.5s forwards, fadeOut 0.5s forwards;
+  animation: slideToTop 0.5s forwards, fadeOut 0.5s forwards;
 }
 
 .about .friendlist--enter {
-  /* -webkit-animation: slideToTop 0.5s forwards reverse, fadeIn 0.5s forwards; */
-  /* animation: slideToTop 0.5s forwards reverse, fadeIn 0.5s forwards; */
+  -webkit-animation: slideToTop 0.5s forwards reverse, fadeIn 0.5s forwards;
+  animation: slideToTop 0.5s forwards reverse, fadeIn 0.5s forwards;
 }
 
 .about .opinions--exit--left {
-  /* -webkit-animation: slideToLeft 1s forwards; */
-  /* animation: slideToLeft 1s forwards; */
+  -webkit-animation: slideToLeft 1s forwards;
+  animation: slideToLeft 1s forwards;
 }
 
 .about .opinions--exit--right {
-  /* -webkit-animation: slideToRight 1s forwards; */
-  /* animation: slideToRight 1s forwards; */
+  -webkit-animation: slideToRight 1s forwards;
+  animation: slideToRight 1s forwards;
 }
 
 .about .opinions--enter--left {
-  /* -webkit-animation: slideFromLeft 1s forwards; */
-  /* animation: slideFromLeft 1s forwards; */
+  -webkit-animation: slideFromLeft 1s forwards;
+  animation: slideFromLeft 1s forwards;
 }
 
 .about .opinions--enter--right {
-  /* -webkit-animation: slideFromRight 1s forwards; */
-  /* animation: slideFromRight 1s forwards; */
+  -webkit-animation: slideFromRight 1s forwards;
+  animation: slideFromRight 1s forwards;
 }
 
 .about .slider--exit--right {
-  /* -webkit-animation: slideToRight 1s forwards; */
-  /* animation: slideToRight 1s forwards; */
+  -webkit-animation: slideToRight 1s forwards;
+  animation: slideToRight 1s forwards;
 }
 
 .about .slider--exit--left {
-  /* -webkit-animation: slideToLeft 1s forwards; */
-  /* animation: slideToLeft 1s forwards; */
+  -webkit-animation: slideToLeft 1s forwards;
+  animation: slideToLeft 1s forwards;
 }
 
 .about .slider--enter--right {
-  /* -webkit-animation: slideFromRight 1s forwards; */
-  /* animation: slideFromRight 1s forwards; */
+  -webkit-animation: slideFromRight 1s forwards;
+  animation: slideFromRight 1s forwards;
 }
 
 .about .slider--enter--left {
-  /* -webkit-animation: slideFromLeft 1s forwards; */
-  /* animation: slideFromLeft 1s forwards; */
+  -webkit-animation: slideFromLeft 1s forwards;
+  animation: slideFromLeft 1s forwards;
 }
 
 .about .aboutMenu--down {
-  /* -webkit-animation: aboutMenuDown 1s forwards; */
-  /* animation: aboutMenuDown 1s forwards; */
+  -webkit-animation: aboutMenuDown 1s forwards;
+  animation: aboutMenuDown 1s forwards;
 }
 
 .about .aboutMenu--up {
-  /* animation: aboutMenuDown 1s forwards reverse; */
+  animation: aboutMenuDown 1s forwards reverse;
 }
 
 .about .jobsMenu--enter {
-  /* -webkit-animation: fadeIn 1s forwards; */
-  /* animation: fadeIn 1s forwards; */
+  -webkit-animation: fadeIn 1s forwards;
+  animation: fadeIn 1s forwards;
 }
 
 .about .jobsMenu--enter .submenu__active p::after {
-  /* -webkit-animation: underline 0.5s forwards; */
-  /* animation: underline 0.5s forwards; */
+  -webkit-animation: underline 0.5s forwards;
+  animation: underline 0.5s forwards;
 }
 
 .about .jobsMenu--exit {
-  /* -webkit-animation: fadeOut 1s forwards; */
-  /* animation: fadeOut 1s forwards; */
+  -webkit-animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards;
 }
 
 .about .jobsMenuDesktop--enter {
-  /* -webkit-animation: aboutSlideFromRight 1s forwards; */
-  /* animation: aboutSlideFromRight 1s forwards; */
+  -webkit-animation: aboutSlideFromRight 1s forwards;
+  animation: aboutSlideFromRight 1s forwards;
 }
 
 .about .jobsMenuDesktop--enter .submenu__active p::after {
-  /* -webkit-animation: underline 0.5s forwards; */
-  /* animation: underline 0.5s forwards; */
+  -webkit-animation: underline 0.5s forwards;
+  animation: underline 0.5s forwards;
 }
 
 .about .jobsMenuDesktop--exit {
-  /* -webkit-animation: slideToRight 1s forwards; */
-  /* animation: slideToRight 1s forwards; */
+  -webkit-animation: slideToRight 1s forwards;
+  animation: slideToRight 1s forwards;
 }
 
 @-webkit-keyframes aboutMenuDown {
@@ -2835,13 +2835,13 @@ img {
 
 .about--enter {
   pointer-events: none;
-  /* -webkit-animation: aboutSlideEnter 2s forwards; */
-  /* animation: aboutSlideEnter 2s forwards; */
+  -webkit-animation: aboutSlideEnter 2s forwards;
+  animation: aboutSlideEnter 2s forwards;
 }
 
 .about--enter .menus {
-  /* -webkit-animation: slideFromLeft 2s forwards; */
-  /* animation: slideFromLeft 2s forwards; */
+  -webkit-animation: slideFromLeft 2s forwards;
+  animation: slideFromLeft 2s forwards;
 }
 
 .about--enter .submenu__active p::after {
@@ -2860,14 +2860,14 @@ img {
 
 .about--inside .aka {
   opacity: 1;
-  /* -webkit-animation: aboutAkas 1s; */
-  /* animation: aboutAkas 1s; */
+  -webkit-animation: aboutAkas 1s;
+  animation: aboutAkas 1s;
 }
 
 .about--inside .red {
   opacity: 0;
-  /* -webkit-animation: rec 0.5s forwards; */
-  /* animation: rec 0.5s forwards; */
+  -webkit-animation: rec 0.5s forwards;
+  animation: rec 0.5s forwards;
 }
 
 .about--inside .submenu__active {
@@ -2878,17 +2878,17 @@ img {
 }
 
 .about--inside .underline--enter {
-  /* animation: shineOut 0.5s forwards reverse; */
+  animation: shineOut 0.5s forwards reverse;
 }
 
 .about--inside .underline--enter p::after {
-  /* -webkit-animation: underline 0.75s forwards !important; */
-  /* animation: underline 0.75s forwards !important; */
+  -webkit-animation: underline 0.75s forwards !important;
+  animation: underline 0.75s forwards !important;
 }
 
 .about--inside .underline--exit {
-  /* -webkit-animation: shineOut 0.75s forwards; */
-  /* animation: shineOut 0.75s forwards; */
+  -webkit-animation: shineOut 0.75s forwards;
+  animation: shineOut 0.75s forwards;
 }
 
 .about--inside .underline--exit p {
@@ -2910,7 +2910,7 @@ img {
   width: 100%;
   height: 1px;
   background-color: #e41313;
-  /* animation: underline 0.75s forwards reverse; */
+  animation: underline 0.75s forwards reverse;
 }
 
 .about--inside .jobsDesktop .underline--exit p {
@@ -2928,16 +2928,16 @@ img {
   width: 100%;
   height: 1px;
   background-color: #e41313;
-  /* animation: underline 0.75s forwards reverse; */
+  animation: underline 0.75s forwards reverse;
 }
 
 .about--inside .jobs .underline--enter {
-  /* animation: shineOut 0.5s forwards reverse; */
+  animation: shineOut 0.5s forwards reverse;
 }
 
 .about--inside .jobs .underline--enter p::after {
-  /* -webkit-animation: underline 1s forwards !important; */
-  /* animation: underline 1s forwards !important; */
+  -webkit-animation: underline 1s forwards !important;
+  animation: underline 1s forwards !important;
   content: "";
   position: absolute;
   bottom: -2px;
@@ -2950,12 +2950,12 @@ img {
 }
 
 .about--inside .jobsDesktop .underline--enter {
-  /* animation: shineOut 0.5s forwards reverse; */
+  animation: shineOut 0.5s forwards reverse;
 }
 
 .about--inside .jobsDesktop .underline--enter p::after {
-  /* -webkit-animation: underline 1s forwards !important; */
-  /* animation: underline 1s forwards !important; */
+  -webkit-animation: underline 1s forwards !important;
+  animation: underline 1s forwards !important;
   content: "";
   position: absolute;
   bottom: -2px;
@@ -2968,33 +2968,33 @@ img {
 }
 
 .menu .mainColumn--enter {
-  /* -webkit-animation: menuEnter 1.25s forwards; */
-  /* animation: menuEnter 1.25s forwards; */
+  -webkit-animation: menuEnter 1.25s forwards;
+  animation: menuEnter 1.25s forwards;
 }
 
 .menu .menu__border--enter {
-  /* -webkit-animation: menuBorderEnter 1.25s forwards; */
-  /* animation: menuBorderEnter 1.25s forwards; */
+  -webkit-animation: menuBorderEnter 1.25s forwards;
+  animation: menuBorderEnter 1.25s forwards;
 }
 
 .menu .link--enter {
-  /* -webkit-animation: menuLinkEnter 1s 1.25s forwards; */
-  /* animation: menuLinkEnter 1s 1.25s forwards; */
+  -webkit-animation: menuLinkEnter 1s 1.25s forwards;
+  animation: menuLinkEnter 1s 1.25s forwards;
 }
 
 .menu .text--enter {
-  /* -webkit-animation: menuTextEnter 1.5s 1.25s forwards; */
-  /* animation: menuTextEnter 1.5s 1.25s forwards; */
+  -webkit-animation: menuTextEnter 1.5s 1.25s forwards;
+  animation: menuTextEnter 1.5s 1.25s forwards;
 }
 
 .menu .logo--enter {
-  /* -webkit-animation: menuLogoEnter 0.5s 2.25s forwards; */
-  /* animation: menuLogoEnter 0.5s 2.25s forwards; */
+  -webkit-animation: menuLogoEnter 0.5s 2.25s forwards;
+  animation: menuLogoEnter 0.5s 2.25s forwards;
 }
 
 .navigation.navigation--enter--right {
-  /* -webkit-animation: navigationEnterRight 2s forwards; */
-  /* animation: navigationEnterRight 2s forwards; */
+  -webkit-animation: navigationEnterRight 2s forwards;
+  animation: navigationEnterRight 2s forwards;
   position: relative;
   -webkit-transform: translateX(100dvw);
   -ms-transform: translateX(100dvw);
@@ -3002,8 +3002,8 @@ img {
 }
 
 .navigation.navigation--enter--left {
-  /* -webkit-animation: navigationEnterLeft 2s forwards; */
-  /* animation: navigationEnterLeft 2s forwards; */
+  -webkit-animation: navigationEnterLeft 2s forwards;
+  animation: navigationEnterLeft 2s forwards;
   position: relative;
   -webkit-transform: translateX(-100dvw);
   -ms-transform: translateX(-100dvw);
@@ -3011,8 +3011,8 @@ img {
 }
 
 .navigation.navigation--enter--up {
-  /* -webkit-animation: navigationEnterUp 2s forwards; */
-  /* animation: navigationEnterUp 2s forwards; */
+  -webkit-animation: navigationEnterUp 2s forwards;
+  animation: navigationEnterUp 2s forwards;
   position: relative;
   -webkit-transform: translateY(-100dvh);
   -ms-transform: translateY(-100dvh);
@@ -3020,8 +3020,8 @@ img {
 }
 
 .navigation.navigation--enter--down {
-  /* -webkit-animation: navigationEnterDown 2s 0.05s forwards; */
-  /* animation: navigationEnterDown 2s 0.05s forwards; */
+  -webkit-animation: navigationEnterDown 2s 0.05s forwards;
+  animation: navigationEnterDown 2s 0.05s forwards;
   position: relative;
   -webkit-transform: translateY(100dvh);
   -ms-transform: translateY(100dvh);
@@ -3806,103 +3806,103 @@ img {
 
 @media screen and (min-width: 1440px) {
   .about--enter {
-    /* -webkit-animation: aboutSlideEnterDesktop 2s forwards; */
-    /* animation: aboutSlideEnterDesktop 2s forwards; */
+    -webkit-animation: aboutSlideEnterDesktop 2s forwards;
+    animation: aboutSlideEnterDesktop 2s forwards;
   }
   .about--inside {
     top: calc(-200dvh - calc((100dvh - (5 * 20px)) / 6));
   }
   .friendlist--enter {
-    /* -webkit-animation: friendlistSlideFromBottom 0.5s forwards, */
-    /* fadeIn 1s forwards !important; */
-    /* animation: friendlistSlideFromBottom 0.5s forwards, fadeIn 1s forwards !important; */
+    -webkit-animation: friendlistSlideFromBottom 0.5s forwards,
+      fadeIn 1s forwards !important;
+    animation: friendlistSlideFromBottom 0.5s forwards, fadeIn 1s forwards !important;
   }
   .about .content__text--exit,
   .about .content__title--exit {
-    /* -webkit-animation: slideToLeft 1s forwards !important; */
-    /* animation: slideToLeft 1s forwards !important; */
+    -webkit-animation: slideToLeft 1s forwards !important;
+    animation: slideToLeft 1s forwards !important;
   }
   .about .content__text--enter,
   .about .content__title--enter {
-    /* -webkit-animation: slideFromLeft 1s forwards !important; */
-    /* animation: slideFromLeft 1s forwards !important; */
+    -webkit-animation: slideFromLeft 1s forwards !important;
+    animation: slideFromLeft 1s forwards !important;
   }
   .contactMenu {
-    /* -webkit-animation: none !important; */
-    /* animation: none !important; */
+    -webkit-animation: none !important;
+    animation: none !important;
   }
   .contact .content {
     overflow: inherit;
   }
   .contact .content__title--exit {
-    /* -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
-    /* animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
+    -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+    animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
   }
   .contact .content__title--enter {
-    /* -webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards; */
-    /* animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards; */
+    -webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
+    animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
   }
   .contact .content__text--exit {
-    /* -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
-    /* animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
+    -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+    animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
   }
   .contact .content__text--enter {
-    /* -webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards; */
-    /* animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards; */
+    -webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
+    animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
   }
   .contact .content--form .content__title--exit {
-    /* -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
-    /* animation: slideToTop 1s forwards, fadeOut 0.75s forwards; */
+    -webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+    animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
   }
   .work--enter .project {
     -webkit-transform: translateY(100vh);
     -ms-transform: translateY(100vh);
     transform: translateY(100vh);
-    /* -webkit-animation: workSliderEnter 1s 1s forwards ease-out !important; */
-    /* animation: workSliderEnter 1s 1s forwards ease-out !important; */
+    -webkit-animation: workSliderEnter 1s 1s forwards ease-out !important;
+    animation: workSliderEnter 1s 1s forwards ease-out !important;
   }
   .work--enter .project:nth-child(odd):not(:first-child) {
     opacity: 0;
-    /* -webkit-animation: workSliderEnterOdd 1s 1s forwards ease-out !important; */
-    /* animation: workSliderEnterOdd 1s 1s forwards ease-out !important; */
+    -webkit-animation: workSliderEnterOdd 1s 1s forwards ease-out !important;
+    animation: workSliderEnterOdd 1s 1s forwards ease-out !important;
   }
   .work--exit .project {
-    /* -webkit-animation: none; */
-    /* animation: none; */
+    -webkit-animation: none;
+    animation: none;
   }
   .work--exit .category span {
-    /* -webkit-animation: none; */
-    /* animation: none; */
+    -webkit-animation: none;
+    animation: none;
   }
   .work--exit .workMenu {
-    /* -webkit-animation: none; */
-    /* animation: none; */
+    -webkit-animation: none;
+    animation: none;
   }
   .work--exit .submenu__active::after {
     width: 100%;
   }
   .category span.category--exit {
-    /* -webkit-animation: categorySlideToRight 1s forwards ease-in-out !important; */
-    /* animation: categorySlideToRight 1s forwards ease-in-out !important; */
+    -webkit-animation: categorySlideToRight 1s forwards ease-in-out !important;
+    animation: categorySlideToRight 1s forwards ease-in-out !important;
   }
   .category span.category--enter {
-    /* animation: categorySlideToRight 1s forwards reverse ease-in-out !important; */
+    animation: categorySlideToRight 1s forwards reverse ease-in-out !important;
   }
   .anim {
-    /* -webkit-animation: workSliderExit 1s forwards ease-in; */
-    /* animation: workSliderExit 1s forwards ease-in; */
+    -webkit-animation: workSliderExit 1s forwards ease-in;
+    animation: workSliderExit 1s forwards ease-in;
   }
   .anim:nth-child(odd):not(:first-child) {
-    /* -webkit-animation: workSliderExitOdd 1s forwards ease-in !important; */
-    /* animation: workSliderExitOdd 1s forwards ease-in !important; */
+    -webkit-animation: workSliderExitOdd 1s forwards ease-in !important;
+    animation: workSliderExitOdd 1s forwards ease-in !important;
   }
   .anim__reverse {
-    /* -webkit-animation: workSliderEnter 1s forwards ease-out; */
-    /* animation: workSliderEnter 1s forwards ease-out; */
+    -webkit-animation: workSliderEnter 1s forwards ease-out;
+    animation: workSliderEnter 1s forwards ease-out;
   }
   .anim__reverse:nth-child(odd):not(:first-child) {
-    /* -webkit-animation: workSliderEnterOdd 1s forwards ease-out !important; */
-    /* animation: workSliderEnterOdd 1s forwards ease-out !important; */
+    -webkit-animation: workSliderEnterOdd 1s forwards ease-out !important;
+    animation: workSliderEnterOdd 1s forwards ease-out !important;
   }
   @-webkit-keyframes workSliderExit {
     0% {
@@ -4087,7 +4087,7 @@ body {
   color: #fcfbf5;
   position: relative;
   font-family: "Bricolage Light", sans-serif;
-  max-height: 100dvh;
+  overflow: hidden !important;
 }
 
 main {
