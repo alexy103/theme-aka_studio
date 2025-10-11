@@ -254,7 +254,6 @@ homeAkaRed.addEventListener("click", () => {
 
 // Afficher CONTACT en cliquant sur le aka de droite
 homeAkaCream.addEventListener("click", () => {
-  contactSlide.classList.add("front");
   handleHomeAkas("contact", homeAkaCream, homeAkaRed, "left", "right");
 });
 
@@ -614,6 +613,7 @@ function updateSlide(slideName, doubleNavigation) {
       });
       // On attend 1s pour que le aka disparaisse puis on lance l'animation d'enter
       setTimeout(() => {
+        contactSlide.classList.add("front");
         contactSlide.classList.add("contact--enter");
         desktopNavbar.classList.add("reduceNavbar--enter");
       }, 1000);
