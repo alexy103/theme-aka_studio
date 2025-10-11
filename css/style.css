@@ -351,8 +351,8 @@ img {
   -webkit-transition: 2s ease-in-out;
   -o-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
-  background-color: #131412;
-  background-color: rgb(134, 87, 0) !important;
+  /* background-color: #131412; */
+  background-color: rgb(156, 18, 168) !important;
 }
 
 .slideTitle {
