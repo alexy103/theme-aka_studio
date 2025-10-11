@@ -351,8 +351,7 @@ img {
   -webkit-transition: 2s ease-in-out;
   -o-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
-  /* background-color: #131412; */
-  background-color: rgb(224, 84, 84) !important;
+  background-color: #131412;
 }
 
 .slideTitle {
@@ -4087,15 +4086,20 @@ body {
   color: #fcfbf5;
   position: relative;
   font-family: "Bricolage Light", sans-serif;
-  overflow: hidden !important;
-}
-
-html {
-  overflow: hidden !important;
 }
 
 main {
   height: calc(100dvh - (100dvh - (5 * 20px)) / 6);
   width: 100dvw;
   overflow: hidden !important;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow: hidden !important;
+}
+
+.slide {
+  background-color: rgb(224, 222, 84) !important;
 }
