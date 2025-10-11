@@ -4087,6 +4087,7 @@ body {
   color: #fcfbf5;
   position: relative;
   font-family: "Bricolage Light", sans-serif;
+  max-height: 100dvh;
 }
 
 main {
