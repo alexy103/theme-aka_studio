@@ -254,6 +254,7 @@ homeAkaRed.addEventListener("click", () => {
 
 // Afficher CONTACT en cliquant sur le aka de droite
 homeAkaCream.addEventListener("click", () => {
+  contactSlide.classList.add("front");
   handleHomeAkas("contact", homeAkaCream, homeAkaRed, "left", "right");
 });
 
