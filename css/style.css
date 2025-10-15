@@ -2955,7 +2955,7 @@ img {
 
 @-webkit-keyframes contactSlideEnter {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(100%);
@@ -2964,7 +2964,7 @@ img {
 
 @keyframes contactSlideEnter {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(100%);
