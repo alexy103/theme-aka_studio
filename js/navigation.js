@@ -660,7 +660,7 @@ function updateSlide(slideName, doubleNavigation) {
 
       setTimeout(() => {
         contactSlide.classList.remove("contact--enter");
-      }, 4200);
+      }, 7000);
       break;
     default:
       break;
