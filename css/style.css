@@ -4100,7 +4100,7 @@ main {
 }
 
 html {
-  background: #131412; /* ta couleur de fond par défaut */
+  background: transparent; /* ta couleur de fond par défaut */
   min-height: 100%;
   height: auto; /* évite un 100% bloquant dans certains cas */
   overflow: hidden !important;
@@ -4115,5 +4115,5 @@ html {
 }
 
 .bg-override {
-  background: #e41313 !important;
+  /* background: #e41313 !important; */
 }
