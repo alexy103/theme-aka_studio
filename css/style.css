@@ -4110,7 +4110,5 @@ body {
 }
 
 .slide {
-  /* background-color: rgb(140, 193, 218) !important; */
-  /* height: 110% !important; */
-  /* margin-top: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px); */
+  background-color: rgb(200, 140, 218) !important;
 }
