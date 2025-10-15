@@ -1,8 +1,8 @@
 const menu = document.querySelector(".menu");
 
 function openMenu() {
-  document.querySelector("body").style.background = "#e41313";
-  document.querySelector("html").style.background = "#e41313";
+  document.querySelector("body").style.background = "#e41313 !important";
+  document.querySelector("html").style.background = "#e41313 !important";
 
   // On enlève front de toutes les slides
   document
