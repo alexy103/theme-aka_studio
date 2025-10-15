@@ -2,7 +2,6 @@ const menu = document.querySelector(".menu");
 
 function openMenu() {
   document.querySelector("html").classList.add("bg-override");
-  document.querySelector("body").classList.add("bg-override");
 
   // On enlève front de toutes les slides
   document
@@ -37,7 +36,6 @@ function openMenu() {
 
 function closeMenu() {
   document.querySelector("html").classList.remove("bg-override");
-  document.querySelector("body").classList.remove("bg-override");
 
   // On cache le menu
   menu.classList.add("unclickable");
