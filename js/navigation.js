@@ -653,7 +653,7 @@ function updateSlide(slideName, doubleNavigation) {
         homeSlide.classList.remove("left");
         contactSlide.classList.remove("contact--enter");
         desktopNavbar.classList.add("reducedNavbar");
-      }, 3500);
+      }, 3400);
       break;
     default:
       break;
