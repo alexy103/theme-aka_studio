@@ -7,7 +7,7 @@ add_action('after_setup_theme', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=234567890');
+    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=2345678901');
 });
 
 add_action('wp_enqueue_scripts', function () {
