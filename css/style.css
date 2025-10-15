@@ -4106,6 +4106,7 @@ body {
   height: auto; /* évite un 100% bloquant dans certains cas */
   overflow: hidden !important;
   padding-bottom: env(safe-area-inset-bottom); /* protège contre la barre iOS */
+  transition: 1s ease-in;
 }
 
 .slide {
