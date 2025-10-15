@@ -4104,6 +4104,7 @@ body {
 }
 
 .slide {
-  background-color: rgb(224, 84, 119) !important;
+  background-color: rgb(70, 82, 146) !important;
   height: 100% !important;
+  margin-top: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px);
 }
