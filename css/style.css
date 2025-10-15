@@ -2127,7 +2127,7 @@ img {
   -webkit-animation: contactSlideEnter 2s forwards;
   animation: contactSlideEnter 2s forwards;
   pointer-events: none;
-  transform: translateX(-100%);
+  transform: translateX(0);
 }
 
 .contact--enter .red {
@@ -2955,7 +2955,7 @@ img {
 
 @-webkit-keyframes contactSlideEnter {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(100%);
@@ -2964,7 +2964,7 @@ img {
 
 @keyframes contactSlideEnter {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(100%);
