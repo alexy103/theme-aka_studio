@@ -150,14 +150,35 @@ desktopNavbarLinks.forEach((link, index) => {
     console.log("actual: " + displayedSlideName);
     document.querySelector("." + displayedSlideName).classList.remove("front");
 
-      console.log(displayedSlideName);
+    console.log(displayedSlideName);
     switch (displayedSlideName) {
       case "home":
         let homeAkas = document.querySelectorAll(".home .aka--wrapper");
-        if(nextSlideName === "work") {
-          handleHomeAkas(nextSlideName, homeAkaRed, homeAkaCream, "right", "left");
+        if (nextSlideName === "work") {
+          handleHomeAkas(
+            nextSlideName,
+            homeAkaRed,
+            homeAkaCream,
+            "right",
+            "left"
+          );
         } else if (nextSlideName === "contact") {
-          handleHomeAkas(nextSlideName, homeAkaCream, homeAkaRed, "left", "right");
+          handleHomeAkas(
+            nextSlideName,
+            homeAkaCream,
+            homeAkaRed,
+            "left",
+            "right"
+          );
+        } else if (nextSlideName === "about") {
+          handleHomeAkas(
+            nextSlideName,
+            homeAkaRed,
+            homeAkaCream,
+            "right",
+            "left",
+            true
+          );
         }
         break;
       case "work":
@@ -180,7 +201,6 @@ desktopNavbarLinks.forEach((link, index) => {
 
         break;
       case "about":
-      console.log("foreach");
         document.querySelector(".home").classList.remove("right");
         document.querySelector(".home").classList.remove("left");
         document.querySelector(".home").classList.add("down");
@@ -369,7 +389,6 @@ function updateSlideFromMenu(slideName) {
       homeSlide.classList.remove("left");
       homeSlide.classList.remove("right");
       homeSlide.classList.remove("down");
-      console.log(displayedSlideName);
 
       exitDisplayedSlide();
 
@@ -573,7 +592,6 @@ function updateSlide(slideName, doubleNavigation) {
       }, 4000);
       break;
     case "about":
-      console.log("updateSlide");
       displayedSlideName = "about";
       homeSlide.classList.remove("front");
       homeSlide.classList.remove("right");
