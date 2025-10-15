@@ -4111,3 +4111,7 @@ body {
 .slide {
   /* background-color: rgb(124, 136, 14) !important; */
 }
+
+.bg-override {
+  background: #e41313 !important;
+}

@@ -1,12 +1,8 @@
 const menu = document.querySelector(".menu");
 
 function openMenu() {
-  document.documentElement.style.setProperty(
-    "background",
-    "#e41313",
-    "important"
-  );
-  document.body.style.setProperty("background", "#e41313", "important");
+  document.documentElement.classList.add("bg-override");
+  document.body.classList.add("bg-override");
 
   // On enlève front de toutes les slides
   document
