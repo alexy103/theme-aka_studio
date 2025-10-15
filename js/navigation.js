@@ -648,6 +648,7 @@ function updateSlide(slideName, doubleNavigation) {
 
       // On fait slide HOME après l'enter pour préparer l'animation d'exit
       setTimeout(() => {
+        homeSlide.style.transition = "0s";
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
       }, 2900);
