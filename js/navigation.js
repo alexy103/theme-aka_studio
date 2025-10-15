@@ -646,15 +646,12 @@ function updateSlide(slideName, doubleNavigation) {
         desktopNavbar.classList.add("reduceNavbar--enter");
       }, 1000);
 
-      // On fait slide HOME après l'enter pour préparer l'animation d'exit
-      // setTimeout(() => {
-      //   homeSlide.classList.add("right");
-      //   homeSlide.classList.remove("left");
-      // }, 2900);
+      setTimeout(() => {
+        contactSlide.classList.add("contact--inside");
+      }, 3500);
 
       // On attend la fin de l'enter puis on prépare les classes pour les animations de submenu dans CONTACT
       setTimeout(() => {
-        contactSlide.classList.add("contact--inside");
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
         contactSlide.classList.remove("contact--enter");
