@@ -406,7 +406,7 @@ function updateSlideFromMenu(slideName) {
 
       setTimeout(() => {
         homeSlide.classList.remove("front");
-      }, 3700);
+      }, 3500);
 
       break;
 
@@ -558,7 +558,7 @@ function updateSlide(slideName, doubleNavigation) {
 
       setTimeout(() => {
         homeSlide.classList.remove("front");
-      }, 5200);
+      }, 5000);
       break;
 
     // Afficher WORK
