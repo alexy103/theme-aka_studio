@@ -761,6 +761,7 @@ img {
     animation: reduceNavbar 2s forwards ease-in-out;
   }
   .reduceNavbar--exit {
+    -webkit-animation: reduceNavbar 2s reverse forwards ease-in-out !important;
     animation: reduceNavbar 2s reverse forwards ease-in-out !important;
   }
   .reducedNavbar {
@@ -2513,11 +2514,13 @@ img {
 
 .work--inside .workMenu__link.underline--exit::after {
   width: 100%;
+  -webkit-animation: underline 1s forwards reverse;
   animation: underline 1s forwards reverse;
 }
 
 .work--inside .workMenu__link.underline--enter {
   position: relative;
+  -webkit-animation: shineOut 0.5s forwards reverse;
   animation: shineOut 0.5s forwards reverse;
 }
 
@@ -2644,11 +2647,13 @@ img {
 
 .contact--inside .contactMenu__link.underline--exit::after {
   width: 100%;
+  -webkit-animation: underline 1s forwards reverse;
   animation: underline 1s forwards reverse;
 }
 
 .contact--inside .contactMenu__link.underline--enter {
   position: relative;
+  -webkit-animation: shineOut 0.5s forwards reverse;
   animation: shineOut 0.5s forwards reverse;
 }
 
@@ -2678,6 +2683,7 @@ img {
 }
 
 .contact--exit .aka {
+  -webkit-animation: contactAkas 1s 0.5s reverse;
   animation: contactAkas 1s 0.5s reverse;
 }
 
