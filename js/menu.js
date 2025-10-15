@@ -1,8 +1,8 @@
 const menu = document.querySelector(".menu");
 
 function openMenu() {
-  document.documentElement.classList.add("bg-override");
-  document.body.classList.add("bg-override");
+  document.querySelector("html").classList.add("bg-override");
+  document.querySelector("body").classList.add("bg-override");
 
   // On enlève front de toutes les slides
   document
