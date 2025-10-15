@@ -150,7 +150,6 @@ desktopNavbarLinks.forEach((link, index) => {
     console.log("actual: " + displayedSlideName);
     document.querySelector("." + displayedSlideName).classList.remove("front");
 
-    console.log(displayedSlideName);
     switch (displayedSlideName) {
       case "home":
         let homeAkas = document.querySelectorAll(".home .aka--wrapper");
@@ -405,6 +404,10 @@ function updateSlideFromMenu(slideName) {
         homeAkaCream.classList.remove("aka--left");
       }, 1500);
 
+      setTimeout(() => {
+        homeSlide.classList.remove("front");
+      }, 2000);
+
       break;
 
     case "work":
@@ -552,6 +555,10 @@ function updateSlide(slideName, doubleNavigation) {
         desktopNavbar.classList.remove("reducedNavbar");
         desktopNavbar.classList.remove("reduceNavbar--exit");
       }, 3000);
+
+      setTimeout(() => {
+        homeSlide.classList.remove("front");
+      }, 3500);
       break;
 
     // Afficher WORK
