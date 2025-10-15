@@ -2127,7 +2127,7 @@ img {
   -webkit-animation: contactSlideEnter 2s forwards;
   animation: contactSlideEnter 2s forwards;
   pointer-events: none;
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .contact--enter .red {
