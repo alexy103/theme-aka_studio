@@ -4099,8 +4099,7 @@ main {
   overflow: hidden !important;
 }
 
-html,
-body {
+html {
   background: #131412; /* ta couleur de fond par défaut */
   min-height: 100%;
   height: auto; /* évite un 100% bloquant dans certains cas */
