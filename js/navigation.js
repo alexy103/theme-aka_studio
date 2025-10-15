@@ -179,6 +179,7 @@ desktopNavbarLinks.forEach((link, index) => {
 
         break;
       case "about":
+      console.log("foreach");
         document.querySelector(".home").classList.remove("right");
         document.querySelector(".home").classList.remove("left");
         document.querySelector(".home").classList.add("down");
@@ -571,6 +572,7 @@ function updateSlide(slideName, doubleNavigation) {
       }, 4000);
       break;
     case "about":
+      console.log("updateSlide");
       displayedSlideName = "about";
       homeSlide.classList.remove("front");
       homeSlide.classList.remove("right");
