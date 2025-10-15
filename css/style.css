@@ -4112,8 +4112,10 @@ html {
 
 .slide {
   /* background-color: rgb(124, 136, 14) !important; */
-  min-height: 100%;
-  max-height: calc(calc((100dvh - (5 * 20px)) / 6) * 5 + 100px);
+  /* min-height: 100%;
+  max-height: calc(calc((100dvh - (5 * 20px)) / 6) * 5 + 100px); */
+  height: 100% !important;
+  /* margin-top: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px); */
 }
 
 .bg-override {
