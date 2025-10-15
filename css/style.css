@@ -533,7 +533,7 @@ img {
 
 .menu {
   position: absolute;
-  height: 100lvh;
+  height: 100dvh;
   width: 100vw;
   background-color: #e41313;
   color: #131412;
@@ -669,7 +669,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-block: 5vh;
+  padding-block: 5vh 10vh;
   color: #fcfbf5;
 }
 
