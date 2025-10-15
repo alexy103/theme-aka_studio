@@ -656,7 +656,7 @@ function updateSlide(slideName, doubleNavigation) {
       setTimeout(() => {
         contactSlide.classList.add("contact--inside");
         desktopNavbar.classList.add("reducedNavbar");
-        contactSlide.classList.remove("contact--enter");
+        // contactSlide.classList.remove("contact--enter");
       }, 4000);
       break;
     default:
