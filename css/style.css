@@ -576,16 +576,16 @@ img {
   writing-mode: vertical-lr;
   padding-top: 10vh;
   letter-spacing: 25px;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
+  -webkit-transform: translateY(110%);
+  -ms-transform: translateY(110%);
+  transform: translateY(110%);
 }
 
 .menu__img {
   max-width: 20px;
-  -webkit-transform: translateY(10vh);
-  -ms-transform: translateY(10vh);
-  transform: translateY(10vh);
+  -webkit-transform: translateY(15vh);
+  -ms-transform: translateY(15vh);
+  transform: translateY(15vh);
 }
 
 .menu .menu__border {
