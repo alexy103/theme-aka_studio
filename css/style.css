@@ -2155,7 +2155,7 @@ img {
 }
 
 .contact--inside {
-  transition: none !important;
+  transition: none;
   transform: translateX(100%);
 }
 
@@ -3514,6 +3514,11 @@ body {
 @media screen and (min-width: 1440px) {
   main {
     height: 100dvh;
+    overflow: hidden !important;
+  }
+
+  .slide {
+    overflow: hidden !important;
   }
 
   .desktopNavigation {
