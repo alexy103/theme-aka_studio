@@ -657,7 +657,7 @@ function updateSlide(slideName, doubleNavigation) {
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
         contactSlide.classList.remove("contact--enter");
-        contactSlide.classList.add("contact--inside");
+        // contactSlide.classList.add("contact--inside");
         desktopNavbar.classList.add("reducedNavbar");
       }, 5000);
       break;
