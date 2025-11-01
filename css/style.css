@@ -3537,7 +3537,7 @@ body {
     ) !important;
   }
   .slide.about {
-    top: -300vh !important;
+    top: -300vh;
   }
 
   .about--inside {
