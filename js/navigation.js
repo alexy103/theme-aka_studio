@@ -656,13 +656,9 @@ function updateSlide(slideName, doubleNavigation) {
       setTimeout(() => {
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
-        // contactSlide.classList.remove("contact--enter");
+        contactSlide.classList.remove("contact--enter");
         contactSlide.classList.add("contact--inside");
         desktopNavbar.classList.add("reducedNavbar");
-      }, 4000);
-
-      setTimeout(() => {
-        contactSlide.classList.remove("contact--enter");
       }, 5000);
       break;
     default:
