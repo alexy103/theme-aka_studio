@@ -3519,7 +3519,7 @@ body {
     ) !important;
   }
   .slide.about {
-    top: calc(-185dvh - calc((100dvh - (5 * 20px)) / 6)) !important;
+    top: -300vh !important;
   }
 }
 
