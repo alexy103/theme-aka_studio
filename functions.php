@@ -9,7 +9,7 @@ add_action('after_setup_theme', function ()
 
 add_action('wp_enqueue_scripts', function ()
 {
-    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=89');
+    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=889');
 });
 
 add_action('wp_enqueue_scripts', function ()
@@ -19,8 +19,8 @@ add_action('wp_enqueue_scripts', function ()
     $theme_js_path = get_template_directory_uri() . '/js/';
 
     wp_enqueue_script('theme-index', $theme_js_path . 'index.js', [], null, true);
-    wp_enqueue_script('theme-menu', $theme_js_path . 'menu.js?version=8', [], null, true);
-    wp_enqueue_script('theme-navigation', $theme_js_path . 'navigation.js?version=8', [], null, true);
+    wp_enqueue_script('theme-menu', $theme_js_path . 'menu.js?version=845', [], null, true);
+    wp_enqueue_script('theme-navigation', $theme_js_path . 'navigation.js?version=845', [], null, true);
     wp_enqueue_script('theme-about', $theme_js_path . 'about.js', [], null, true);
     wp_enqueue_script('theme-work', $theme_js_path . 'work.js', [], null, true);
     wp_enqueue_script('theme-contact', $theme_js_path . 'contact.js', [], null, true);
