@@ -654,16 +654,12 @@ function updateSlide(slideName, doubleNavigation) {
 
       // On attend la fin de l'enter puis on prépare les classes pour les animations de submenu dans CONTACT
       setTimeout(() => {
-        // contactSlide.classList.add("contact--inside");
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
         contactSlide.classList.remove("contact--enter");
+        contactSlide.classList.add("contact--inside");
         desktopNavbar.classList.add("reducedNavbar");
       }, 4000);
-
-      setTimeout(() => {
-        contactSlide.classList.add("contact--inside");
-      }, 4500);
       break;
     default:
       break;
