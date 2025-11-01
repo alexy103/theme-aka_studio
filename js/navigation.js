@@ -652,9 +652,13 @@ function updateSlide(slideName, doubleNavigation) {
         desktopNavbar.classList.add("reduceNavbar--enter");
       }, 1000);
 
-      // On attend la fin de l'enter puis on prépare les classes pour les animations de submenu dans CONTACT
       setTimeout(() => {
         contactSlide.classList.add("contact--inside");
+      }, 2500);
+
+      // On attend la fin de l'enter puis on prépare les classes pour les animations de submenu dans CONTACT
+      setTimeout(() => {
+        // contactSlide.classList.add("contact--inside");
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
         contactSlide.classList.remove("contact--enter");
