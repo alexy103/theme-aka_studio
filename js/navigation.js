@@ -652,20 +652,14 @@ function updateSlide(slideName, doubleNavigation) {
         desktopNavbar.classList.add("reduceNavbar--enter");
       }, 1000);
 
-      // On fait slide HOME après l'enter pour préparer l'animation d'exit
+      // On attend la fin de l'enter puis on prépare les classes pour les animations de submenu dans CONTACT
       setTimeout(() => {
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
-      }, 2900);
-
-      // On attend la fin de l'enter puis on prépare les classes pour les animations de submenu dans CONTACT
-      setTimeout(() => {
-        // homeSlide.classList.add("right");
-        // homeSlide.classList.remove("left");
         contactSlide.classList.remove("contact--enter");
         contactSlide.classList.add("contact--inside");
         desktopNavbar.classList.add("reducedNavbar");
-      }, 5000);
+      }, 4000);
       break;
     default:
       break;
