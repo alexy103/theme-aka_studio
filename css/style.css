@@ -1062,7 +1062,7 @@ img {
   }
   .work .aka__cream {
     top: auto;
-    bottom: calc(calc((100dvh - (11 * 20px)) / 12) + 20px);
+    bottom: calc(calc((100dvh - (11 * 20px)) / 12) + 70px);
     height: calc(calc((100dvh - (11 * 20px)) / 12) * 2);
   }
   .work .projects {
@@ -1901,7 +1901,7 @@ img {
   .contact .aka__red {
     height: calc(calc((100dvh - (11 * 20px)) / 12) * 2);
     top: auto;
-    bottom: calc(calc((100dvh - (11 * 20px)) / 12) + 20px);
+    bottom: calc(calc((100dvh - (11 * 20px)) / 12) + 70px);
   }
   .contact .content.content--typeform,
   .contact .content.content--medias {
@@ -3438,7 +3438,7 @@ img {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(100px);
+      transform: translateX(200px);
     }
   }
   @keyframes categorySlideToRight {
@@ -3446,7 +3446,7 @@ img {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(100px);
+      transform: translateX(200px);
     }
   }
 }

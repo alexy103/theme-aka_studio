@@ -4,8 +4,7 @@
     <section class="home slide">
         <div class="identity">
             <div class="identity__logo">
-                <img
-                    src="<?= wp_get_attachment_image_url(get_field('home')['main_logo'], 'full') ?>"
+                <img src="<?= wp_get_attachment_image_url(get_field('home')['main_logo'], 'full') ?>"
                     alt="AKA STUDIO Logo" />
             </div>
             <h1 class="identity__title">
@@ -13,16 +12,12 @@
             </h1>
         </div>
         <div class="aka__cream--wrapper aka--wrapper">
-            <img
-                src="<?= wp_get_attachment_image_url(get_field('home')['left_kanji'], 'full') ?>"
-                alt="Cream Kanji"
+            <img src="<?= wp_get_attachment_image_url(get_field('home')['left_kanji'], 'full') ?>" alt="Cream Kanji"
                 class="aka aka__cream" />
             <p>CONTACT</p>
         </div>
         <div class="aka__red--wrapper aka--wrapper">
-            <img
-                src="<?= wp_get_attachment_image_url(get_field('home')['right_kanji'], 'full') ?>"
-                alt="Red Kanji"
+            <img src="<?= wp_get_attachment_image_url(get_field('home')['right_kanji'], 'full') ?>" alt="Red Kanji"
                 class="aka aka__red" />
             <p>WORK</p>
         </div>
@@ -34,10 +29,10 @@
             <?php
             // Récupérer les catégories de la taxonomie 'projet_cat' qui ont au moins 1 post
             $available_cats = get_terms([
-                'taxonomy'   => 'projet_cat',
+                'taxonomy' => 'projet_cat',
                 'hide_empty' => true,
-                'orderby'    => 'name', // change en 'id' si tu veux l'ordre de création
-                'order'      => 'ASC',
+                'orderby' => 'name', // change en 'id' si tu veux l'ordre de création
+                'order' => 'ASC',
             ]);
             ?>
 
@@ -60,31 +55,34 @@
 
                 <?php
                 $q = new WP_Query([
-                    'post_type'      => 'projet',
+                    'post_type' => 'projet',
                     'posts_per_page' => -1,
-                    'tax_query'      => [[
-                        'taxonomy' => 'projet_cat',
-                        'field'    => 'term_id',
-                        'terms'    => $term->term_id,
-                    ]],
+                    'tax_query' => [
+                        [
+                            'taxonomy' => 'projet_cat',
+                            'field' => 'term_id',
+                            'terms' => $term->term_id,
+                        ]
+                    ],
                 ]);
                 $index = 1;
                 ?>
 
                 <?php if ($q->have_posts()): ?>
                     <div class="projects projects--<?= esc_attr($term->slug); ?> <?= $first ? '' : 'hidden'; ?>">
-                        <?php while ($q->have_posts()): $q->the_post(); ?>
+                        <?php while ($q->have_posts()):
+                            $q->the_post(); ?>
 
                             <?php
                             // Champs natifs
-                            $title   = get_the_title();
+                            $title = get_the_title();
                             $content = get_the_content();
 
                             // Champs ACF
-                            $img_id   = get_field('image');   // return_format = 'id'
-                            $link     = get_field('lien');
-                            $client   = get_field('client');
-                            $date     = get_field('date');    // date_picker
+                            $img_id = get_field('image');   // return_format = 'id'
+                            $link = get_field('lien');
+                            $client = get_field('client');
+                            $date = get_field('date');    // date_picker
                             $fonction = get_field('fonction');
                             ?>
                             <figure class="project">
@@ -99,14 +97,14 @@
                                             'large',
                                             false,
                                             [
-                                                'class'            => 'thumbnail',
-                                                'alt'              => esc_attr($title),
-                                                'data-title'       => esc_attr($title),
-                                                'data-src'         => esc_url($link),
+                                                'class' => 'thumbnail',
+                                                'alt' => esc_attr($title),
+                                                'data-title' => esc_attr($title),
+                                                'data-src' => esc_url($link),
                                                 'data-description' => esc_attr(wp_strip_all_tags($content)),
-                                                'data-client'      => esc_attr($client),
-                                                'data-fonction'    => esc_attr($fonction),
-                                                'data-date'        => esc_attr($date),
+                                                'data-client' => esc_attr($client),
+                                                'data-fonction' => esc_attr($fonction),
+                                                'data-date' => esc_attr($date),
                                             ]
                                         ); ?>
                                     <?php endif; ?>
@@ -131,20 +129,14 @@
 
 
 
-        <img
-            src="<?= wp_get_attachment_image_url(get_field('work')['contact_kanji'], 'full') ?>"
-            alt="Cream Kanji"
+        <img src="<?= wp_get_attachment_image_url(get_field('work')['contact_kanji'], 'full') ?>" alt="Cream Kanji"
             class="aka aka__cream hidden" />
-        <img
-            src="<?= wp_get_attachment_image_url(get_field('work')['home_kanji'], 'full') ?>"
-            alt="Red Kanji"
+        <img src="<?= wp_get_attachment_image_url(get_field('work')['home_kanji'], 'full') ?>" alt="Red Kanji"
             class="aka aka__red hidden" />
     </section>
     <section class="about slide">
         <div class="content content--first">
-            <img
-                src="<?= wp_get_attachment_image_url(get_field('about')['aka'], 'full') ?>"
-                alt="AKA STUDIO Main Logo"
+            <img src="<?= wp_get_attachment_image_url(get_field('about')['aka'], 'full') ?>" alt="AKA STUDIO Main Logo"
                 class="content__img" />
             <div>
                 <h3 class="content__title"><?= get_field('about')['aka-title'] ?></h3>
@@ -176,16 +168,17 @@
                 <div class="opinions">
                     <?php
                     $q = new WP_Query([
-                        'post_type'      => 'avis',
-                        'post_status'    => 'publish',
+                        'post_type' => 'avis',
+                        'post_status' => 'publish',
                         'posts_per_page' => -1,
-                        'orderby'        => 'date',
-                        'order'          => 'DESC',
+                        'orderby' => 'date',
+                        'order' => 'DESC',
                     ]);
                     $i = 0;
 
                     if ($q->have_posts()):
-                        while ($q->have_posts()): $q->the_post();
+                        while ($q->have_posts()):
+                            $q->the_post();
                             // Classes actives pour le premier item
                             $active_class = ($i != 0) ? ' hidden' : ''; ?>
                             <figure class="opinion<?= $active_class; ?>">
@@ -201,7 +194,7 @@
                                 </div>
                                 <h4 class="opinion__title"><?= esc_html(get_the_title()); ?></h4>
                             </figure>
-                        <?php
+                            <?php
                             $i++;
                         endwhile;
                         wp_reset_postdata(); ?>
@@ -211,27 +204,27 @@
                 <div class="desktopOpinions">
                     <?php
                     $q = new WP_Query([
-                        'post_type'      => 'avis',
-                        'post_status'    => 'publish',
+                        'post_type' => 'avis',
+                        'post_status' => 'publish',
                         'posts_per_page' => -1,
-                        'orderby'        => 'date',
-                        'order'          => 'DESC',
+                        'orderby' => 'date',
+                        'order' => 'DESC',
                     ]);
                     $i = 0;
 
                     if ($q->have_posts()):
-                        while ($q->have_posts()): $q->the_post();
+                        while ($q->have_posts()):
+                            $q->the_post();
                             // Classes actives pour le premier item
                             $active_class = ($i === 0) ? ' active activeIn' : ''; ?>
                             <figure class="opinion<?= $active_class; ?>">
-                                <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>"
-                                    alt="">
+                                <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
                                 <figcaption class="opinion__infos">
                                     <h4 class="opinion__title"><?= esc_html(get_the_title()); ?></h4>
                                     <p class="opinion__text"><?= wp_kses_post(get_the_content()); ?></p>
                                 </figcaption>
                             </figure>
-                        <?php
+                            <?php
                             $i++;
                         endwhile;
                         wp_reset_postdata(); ?>
@@ -253,12 +246,13 @@
             </p>
             <?php
             // Réutilise $terms si déjà défini plus haut, sinon on le charge avec les mêmes options
-            if (!isset($terms) || is_wp_error($terms)) {
+            if (!isset($terms) || is_wp_error($terms))
+            {
                 $terms = get_terms([
-                    'taxonomy'   => 'friends_cat',
+                    'taxonomy' => 'friends_cat',
                     'hide_empty' => true,
-                    'orderby'    => 'name',
-                    'order'      => 'ASC',
+                    'orderby' => 'name',
+                    'order' => 'ASC',
                 ]);
             }
 
@@ -267,29 +261,32 @@
                 foreach ($terms as $term):
                     // Premier .friendlist visible, suivants hidden
                     $hidden_class = ($t_i > 0) ? ' hidden' : '';
-            ?>
+                    ?>
                     <div class="friendlist<?= $hidden_class; ?>">
                         <?php
                         $q = new WP_Query([
-                            'post_type'      => 'friends',
-                            'post_status'    => 'publish',
+                            'post_type' => 'friends',
+                            'post_status' => 'publish',
                             'posts_per_page' => 3,
-                            'orderby'        => 'date',
-                            'order'          => 'DESC',
-                            'tax_query'      => [[
-                                'taxonomy' => 'friends_cat',
-                                'field'    => 'term_id',
-                                'terms'    => $term->term_id,
-                            ]],
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'tax_query' => [
+                                [
+                                    'taxonomy' => 'friends_cat',
+                                    'field' => 'term_id',
+                                    'terms' => $term->term_id,
+                                ]
+                            ],
                         ]);
 
                         $i = 0;
                         if ($q->have_posts()):
-                            while ($q->have_posts()): $q->the_post();
+                            while ($q->have_posts()):
+                                $q->the_post();
                                 // 1er figure visible, suivants hidden
                                 $item_hidden = ($i > 0) ? ' hidden' : '';
                                 $link = get_field('link'); // ACF link (return_format: array)
-                        ?>
+                                ?>
                                 <figure class="friend<?= $item_hidden; ?>">
                                     <div class="slider">
                                         <i class="fa-solid fa-chevron-left"></i>
@@ -309,14 +306,14 @@
                                         <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
                                     </figcaption>
                                 </figure>
-                        <?php
+                                <?php
                                 $i++;
                             endwhile;
                             wp_reset_postdata();
                         endif;
                         ?>
                     </div>
-            <?php
+                    <?php
                     $t_i++;
                 endforeach;
             endif;
@@ -326,10 +323,10 @@
             <?php
             // 1) Un seul get_terms pour TOUT (listes + menu), mêmes options que le menu
             $terms = get_terms([
-                'taxonomy'   => 'friends_cat',
+                'taxonomy' => 'friends_cat',
                 'hide_empty' => true,   // ← CHANGÉ (avant: false)
-                'orderby'    => 'name',
-                'order'      => 'ASC',  // ← CHANGÉ (avant: DESC)
+                'orderby' => 'name',
+                'order' => 'ASC',  // ← CHANGÉ (avant: DESC)
             ]);
 
             if (!is_wp_error($terms) && !empty($terms)):
@@ -337,24 +334,27 @@
                 foreach ($terms as $term):
                     // Premier bloc visible, suivants masqués (même logique que ton HTML)
                     $hidden_class = ($t_i > 0) ? ' hidden' : '';
-            ?>
+                    ?>
                     <div class="friendlistDesktop<?= $hidden_class; ?>">
                         <?php
                         $q = new WP_Query([
-                            'post_type'      => 'friends',
-                            'post_status'    => 'publish',
+                            'post_type' => 'friends',
+                            'post_status' => 'publish',
                             'posts_per_page' => 3,
-                            'orderby'        => 'date',
-                            'order'          => 'DESC',
-                            'tax_query'      => [[
-                                'taxonomy' => 'friends_cat',
-                                'field'    => 'term_id',
-                                'terms'    => $term->term_id,
-                            ]],
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'tax_query' => [
+                                [
+                                    'taxonomy' => 'friends_cat',
+                                    'field' => 'term_id',
+                                    'terms' => $term->term_id,
+                                ]
+                            ],
                         ]);
 
                         if ($q->have_posts()):
-                            while ($q->have_posts()): $q->the_post(); ?>
+                            while ($q->have_posts()):
+                                $q->the_post(); ?>
                                 <figure class="friend">
                                     <a href="<?= esc_url(get_field('link')['url']); ?>">
                                         <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
@@ -364,12 +364,12 @@
                                         <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
                                     </figcaption>
                                 </figure>
-                        <?php
+                                <?php
                             endwhile;
                             wp_reset_postdata();
                         endif; ?>
                     </div>
-            <?php
+                    <?php
                     $t_i++;
                 endforeach;
             endif;
@@ -381,7 +381,7 @@
             <?php
             // 2) PAS de 2e get_terms différent : on réutilise l'exact même ordre
             $jobs_terms = $terms; // ← CHANGEMENT: on reprend les mêmes termes/ordre
-
+            
             if (!is_wp_error($jobs_terms) && !empty($jobs_terms)): ?>
                 <ul class="jobs submenu hidden">
                     <?php $first = true; ?>
@@ -409,7 +409,7 @@
         <?php
         // 2) PAS de 2e get_terms différent : on réutilise l'exact même ordre
         $jobs_terms = $terms; // ← CHANGEMENT: on reprend les mêmes termes/ordre
-
+        
         if (!is_wp_error($jobs_terms) && !empty($jobs_terms)): ?>
             <ul class="jobsDesktop submenu hidden">
                 <?php $first = true; ?>
@@ -423,19 +423,16 @@
         <?php endif; ?>
 
         <h2 class="slideTitle">ABOUT<span class="red">.</span></h2>
-        <img
-            src="<?= wp_get_attachment_image_url(get_field('about')['contact_kanji'], 'full') ?>"
-            alt="Cream Kanji"
+        <img src="<?= wp_get_attachment_image_url(get_field('about')['contact_kanji'], 'full') ?>" alt="Cream Kanji"
             class="aka aka__cream hidden" />
-        <img
-            src="<?= wp_get_attachment_image_url(get_field('about')['work_kanji'], 'full') ?>"
-            alt="Red Kanji"
+        <img src="<?= wp_get_attachment_image_url(get_field('about')['work_kanji'], 'full') ?>" alt="Red Kanji"
             class="aka aka__red hidden" />
     </section>
 
     <section class="contact slide">
         <div class="content content--typeform">
-            <a href="<?= get_field('contact')['typeform-link'] ?>" target="_blank" class="subtitle">Typeform<span class="red">.</span> </a>
+            <a href="<?= get_field('contact')['typeform-link'] ?>" target="_blank" class="subtitle">Typeform<span
+                    class="red">.</span> </a>
             <p class="text">
                 Remplis le formulaire Typeform pour décrire les caractéristiques de
                 ton projet et prends rendez-vous en visio ou en face-à-face pour que
@@ -447,22 +444,19 @@
             <ul class="medias">
                 <li class="media">
                     <a href="<?= get_field('contact')['instagram']['link'] ?>">
-                        <img
-                            src="<?= wp_get_attachment_image_url(get_field('contact')['instagram']['logo'], 'full') ?>"
+                        <img src="<?= wp_get_attachment_image_url(get_field('contact')['instagram']['logo'], 'full') ?>"
                             alt="Instagram logo" />
                     </a>
                 </li>
                 <li class="media">
                     <a href="<?= get_field('contact')['behance']['link'] ?>">
-                        <img
-                            src="<?= wp_get_attachment_image_url(get_field('contact')['behance']['logo'], 'full') ?>"
+                        <img src="<?= wp_get_attachment_image_url(get_field('contact')['behance']['logo'], 'full') ?>"
                             alt="Behance logo" />
                     </a>
                 </li>
                 <li class="media">
                     <a href="<?= get_field('contact')['linkedin']['link'] ?>">
-                        <img
-                            src="<?= wp_get_attachment_image_url(get_field('contact')['linkedin']['logo'], 'full') ?>"
+                        <img src="<?= wp_get_attachment_image_url(get_field('contact')['linkedin']['logo'], 'full') ?>"
                             alt="Linkedin logo" />
                     </a>
                 </li>
@@ -480,9 +474,9 @@
 
 
             <script>
-                setTimeout(function() {
-                    document.querySelectorAll('.content--form form').forEach(function(form) {
-                        form.addEventListener('reset', function(e) {
+                setTimeout(function () {
+                    document.querySelectorAll('.content--form form').forEach(function (form) {
+                        form.addEventListener('reset', function (e) {
                             e.preventDefault();
                             console.log(document.querySelectorAll('.content--form form'));
                         });
@@ -525,8 +519,9 @@
 
                 @media screen and (min-width: 1440px) {
                     .wpcf7 form.sent .wpcf7-response-output {
-                        font-size: 20px;
-                        text-align: center;
+                        font-size: 30px;
+                        font-family: "Bricolage Bold";
+                        padding-top: 15vh;
                     }
                 }
 
@@ -546,13 +541,9 @@
                 <li class="contactMenu__link">Mail</li>
             </ul>
         </div>
-        <img
-            src="<?= wp_get_attachment_image_url(get_field('contact')['home_kanji'], 'full') ?>"
-            alt="Cream Kanji"
+        <img src="<?= wp_get_attachment_image_url(get_field('contact')['home_kanji'], 'full') ?>" alt="Cream Kanji"
             class="aka aka__cream hidden" />
-        <img
-            src="<?= wp_get_attachment_image_url(get_field('contact')['work_kanji'], 'full') ?>"
-            alt="Red Kanji"
+        <img src="<?= wp_get_attachment_image_url(get_field('contact')['work_kanji'], 'full') ?>" alt="Red Kanji"
             class="aka aka__red hidden" />
     </section>
 </main>
