@@ -657,14 +657,15 @@ function updateSlide(slideName, doubleNavigation) {
         contactSlide.classList.add("contact--inside");
         // homeSlide.classList.add("right");
         // homeSlide.classList.remove("left");
-        contactSlide.classList.remove("contact--enter");
+        // contactSlide.classList.remove("contact--enter");
         desktopNavbar.classList.add("reducedNavbar");
       }, 4000);
 
       setTimeout(() => {
+        contactSlide.classList.remove("contact--enter");
         homeSlide.classList.add("right");
         homeSlide.classList.remove("left");
-      }, 5000);
+      }, 10000);
       break;
     default:
       break;
