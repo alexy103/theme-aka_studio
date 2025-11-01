@@ -2606,6 +2606,7 @@ img {
     top: 0;
   }
 }
+
 /* @-webkit-keyframes aboutSlideEnterDesktop {
   0% {
     top: calc(-300dvh - calc((100dvh - (5 * 20px)) / 6));
@@ -3537,6 +3538,10 @@ body {
   }
   .slide.about {
     top: -300vh !important;
+  }
+
+  .about--inside {
+    top: 0 !important;
   }
 }
 
