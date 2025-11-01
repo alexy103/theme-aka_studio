@@ -250,7 +250,6 @@ navigationLogoDesktop.addEventListener("click", () => {
       "navigation--enter--down",
       "navigation--enter--up"
     );
-    aboutSlide.classList.remove("about--inside");
     handleAkas(workAkas, "left");
     handleAkas(contactAkas, "right");
     handleAkas(aboutAkas, "down");
@@ -524,6 +523,7 @@ function updateSlide(slideName, doubleNavigation) {
   setTimeout(() => {
     contactSlide.classList.remove("contact--inside");
     workSlide.classList.remove("work--inside");
+    aboutSlide.classList.remove("about--inside");
   }, 3000);
 
   switch (slideName) {
