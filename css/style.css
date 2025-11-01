@@ -2155,7 +2155,7 @@ img {
 }
 
 .contact--inside {
-  transition: none;
+  transition: none !important;
   transform: translateX(100%);
 }
 
