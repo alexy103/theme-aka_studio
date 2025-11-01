@@ -653,7 +653,7 @@ function updateSlide(slideName, doubleNavigation) {
       }, 1000);
 
       setTimeout(() => {
-        // contactSlide.classList.remove("contact--enter");
+        contactSlide.classList.remove("contact--enter");
         contactSlide.classList.add("contact--inside");
       }, 3500);
 
