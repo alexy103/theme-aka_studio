@@ -2594,7 +2594,7 @@ img {
     top: -300vh;
   }
   100% {
-    top: 0;
+    top: -200vh;
   }
 }
 
@@ -2603,7 +2603,7 @@ img {
     top: -300vh;
   }
   100% {
-    top: 0;
+    top: -200vh;
   }
 }
 
@@ -3541,7 +3541,7 @@ body {
   }
 
   .about--inside {
-    top: 0 !important;
+    top: -200vh !important;
   }
 }
 
