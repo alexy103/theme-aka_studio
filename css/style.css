@@ -3494,9 +3494,32 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
-  .work .projects {
-    margin-top: 15vh !important;
-    height: 85dvh !important;
+  main {
+    height: 100dvh;
+  }
+
+  .desktopNavigation {
+    position: absolute !important;
+  }
+  .slide.home {
+    top: 0 !important;
+  }
+  .slide.work {
+    top: calc(
+      -85dvh - calc((100dvh - (11 * 20px)) / 12) - calc(
+          (100dvh - (11 * 20px)) / 12
+        ) - 21px
+    ) !important;
+  }
+  .slide.contact {
+    top: calc(
+      -285dvh - calc((100dvh - (11 * 20px)) / 12) - calc(
+          (100dvh - (11 * 20px)) / 12
+        ) - 21px
+    ) !important;
+  }
+  .slide.about {
+    top: calc(-185dvh - calc((100dvh - (5 * 20px)) / 6)) !important;
   }
 }
 
@@ -3504,6 +3527,6 @@ body {
   /* background-color: rgb(42, 37, 61) !important; */
 }
 
-.bg-override {
+/* .bg-override {
   background: #e41313 !important;
-}
+} */
