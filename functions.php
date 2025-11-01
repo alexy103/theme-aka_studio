@@ -1,23 +1,26 @@
 <?php
 
 // Activer la gestion du <title> par WordPress
-add_action('after_setup_theme', function () {
+add_action('after_setup_theme', function ()
+{
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
 });
 
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=25556495553414446445565556544455652411853454586444864576789701234');
+add_action('wp_enqueue_scripts', function ()
+{
+    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=8');
 });
 
-add_action('wp_enqueue_scripts', function () {
+add_action('wp_enqueue_scripts', function ()
+{
     wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6839368886.js', [], null, true);
 
     $theme_js_path = get_template_directory_uri() . '/js/';
 
     wp_enqueue_script('theme-index', $theme_js_path . 'index.js', [], null, true);
-    wp_enqueue_script('theme-menu', $theme_js_path . 'menu.js?version=6142411853544644455655544965465556545555', [], null, true);
-    wp_enqueue_script('theme-navigation', $theme_js_path . 'navigation.js?version=2554424114985445565555654555565354748686454444787555', [], null, true);
+    wp_enqueue_script('theme-menu', $theme_js_path . 'menu.js?version=8', [], null, true);
+    wp_enqueue_script('theme-navigation', $theme_js_path . 'navigation.js?version=8', [], null, true);
     wp_enqueue_script('theme-about', $theme_js_path . 'about.js', [], null, true);
     wp_enqueue_script('theme-work', $theme_js_path . 'work.js', [], null, true);
     wp_enqueue_script('theme-contact', $theme_js_path . 'contact.js', [], null, true);
@@ -26,36 +29,40 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 // CPT pour les projets
-add_action('init', function () {
+add_action('init', function ()
+{
     register_post_type('projet', [
         'labels' => [
-            'name'          => 'WORK-Projets',
+            'name' => 'WORK-Projets',
             'singular_name' => 'Projet',
         ],
-        'public'      => true,              // visible en front et admin
-        'menu_icon'   => 'dashicons-portfolio', // icône dans le menu admin
-        'supports'    => ['title', 'editor', 'thumbnail'], // champs activés
+        'public' => true,              // visible en front et admin
+        'menu_icon' => 'dashicons-portfolio', // icône dans le menu admin
+        'supports' => ['title', 'editor', 'thumbnail'], // champs activés
     ]);
 });
 
 // Taxonomie pour classer les projets
-add_action('init', function () {
+add_action('init', function ()
+{
     register_taxonomy('projet_cat', ['projet'], [
         'labels' => [
-            'name'          => 'Catégories de projets',
+            'name' => 'Catégories de projets',
             'singular_name' => 'Catégorie de projet',
         ],
-        'public'            => true,
-        'hierarchical'      => false,
-        'show_ui'           => true,
+        'public' => true,
+        'hierarchical' => false,
+        'show_ui' => true,
         'show_admin_column' => true,
-        'show_in_rest'      => true,
+        'show_in_rest' => true,
     ]);
 });
 
 // Champs ACF pour le CPT "projet"
-add_action('acf/init', function () {
-    if (!function_exists('acf_add_local_field_group')) return;
+add_action('acf/init', function ()
+{
+    if (!function_exists('acf_add_local_field_group'))
+        return;
 
     acf_add_local_field_group([
         'key' => 'group_projet_fields',
@@ -67,7 +74,7 @@ add_action('acf/init', function () {
                 'name' => 'image',
                 'type' => 'image',
                 'return_format' => 'id',
-                'preview_size'  => 'medium',
+                'preview_size' => 'medium',
             ],
             [
                 'key' => 'field_projet_lien',
@@ -94,11 +101,15 @@ add_action('acf/init', function () {
                 'type' => 'text',  // ex: "motion design, photographie, montage"
             ],
         ],
-        'location' => [[[
-            'param' => 'post_type',
-            'operator' => '==',
-            'value' => 'projet',
-        ]]],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'projet',
+                ]
+            ]
+        ],
         'position' => 'normal',
         'style' => 'default',
         'active' => true,
@@ -106,21 +117,24 @@ add_action('acf/init', function () {
 });
 
 // CPT pour les avis
-add_action('init', function () {
+add_action('init', function ()
+{
     register_post_type('avis', [
         'labels' => [
-            'name'          => 'Avis',
+            'name' => 'Avis',
             'singular_name' => 'Avis',
         ],
-        'public'      => true,              // visible en front et admin
-        'menu_icon'   => 'dashicons-portfolio', // icône dans le menu admin
-        'supports'    => ['title', 'editor', 'thumbnail'], // champs activés
+        'public' => true,              // visible en front et admin
+        'menu_icon' => 'dashicons-portfolio', // icône dans le menu admin
+        'supports' => ['title', 'editor', 'thumbnail'], // champs activés
     ]);
 });
 
 // Champs ACF pour le CPT "avis"
-add_action('acf/init', function () {
-    if (!function_exists('acf_add_local_field_group')) return;
+add_action('acf/init', function ()
+{
+    if (!function_exists('acf_add_local_field_group'))
+        return;
 
     acf_add_local_field_group([
         'key' => 'group_avis_fields',
@@ -132,14 +146,18 @@ add_action('acf/init', function () {
                 'name' => 'image',
                 'type' => 'image',
                 'return_format' => 'id',
-                'preview_size'  => 'medium',
+                'preview_size' => 'medium',
             ]
         ],
-        'location' => [[[
-            'param' => 'post_type',
-            'operator' => '==',
-            'value' => 'avis',
-        ]]],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'avis',
+                ]
+            ]
+        ],
         'position' => 'normal',
         'style' => 'default',
         'active' => true,
@@ -147,36 +165,40 @@ add_action('acf/init', function () {
 });
 
 // CPT pour les friends
-add_action('init', function () {
+add_action('init', function ()
+{
     register_post_type('friends', [
         'labels' => [
-            'name'          => 'Réseau',
+            'name' => 'Réseau',
             'singular_name' => 'Réseau',
         ],
-        'public'      => true,              // visible en front et admin
-        'menu_icon'   => 'dashicons-portfolio', // icône dans le menu admin
-        'supports'    => ['title', 'editor', 'thumbnail'], // champs activés
+        'public' => true,              // visible en front et admin
+        'menu_icon' => 'dashicons-portfolio', // icône dans le menu admin
+        'supports' => ['title', 'editor', 'thumbnail'], // champs activés
     ]);
 });
 
 // Taxonomie pour classer les friends
-add_action('init', function () {
+add_action('init', function ()
+{
     register_taxonomy('friends_cat', ['friends'], [
         'labels' => [
-            'name'          => 'Type de réseau',
+            'name' => 'Type de réseau',
             'singular_name' => 'Type de réseau',
         ],
-        'public'            => true,
-        'hierarchical'      => false,
-        'show_ui'           => true,
+        'public' => true,
+        'hierarchical' => false,
+        'show_ui' => true,
         'show_admin_column' => true,
-        'show_in_rest'      => true,
+        'show_in_rest' => true,
     ]);
 });
 
 // Champs ACF pour le CPT "friends"
-add_action('acf/init', function () {
-    if (!function_exists('acf_add_local_field_group')) return;
+add_action('acf/init', function ()
+{
+    if (!function_exists('acf_add_local_field_group'))
+        return;
 
     acf_add_local_field_group([
         'key' => 'group_friends_fields',
@@ -188,7 +210,7 @@ add_action('acf/init', function () {
                 'name' => 'image',
                 'type' => 'image',
                 'return_format' => 'id',
-                'preview_size'  => 'medium',
+                'preview_size' => 'medium',
             ],
             [
                 'key' => 'field_friends_link',
@@ -199,11 +221,15 @@ add_action('acf/init', function () {
             ],
 
         ],
-        'location' => [[[
-            'param' => 'post_type',
-            'operator' => '==',
-            'value' => 'friends',
-        ]]],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'friends',
+                ]
+            ]
+        ],
         'position' => 'normal',
         'style' => 'default',
         'active' => true,

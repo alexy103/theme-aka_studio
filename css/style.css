@@ -3494,7 +3494,7 @@ body {
 }
 
 .slide {
-  background-color: rgb(42, 37, 61) !important;
+  /* background-color: rgb(42, 37, 61) !important; */
 }
 
 .bg-override {
