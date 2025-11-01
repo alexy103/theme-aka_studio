@@ -3493,6 +3493,13 @@ body {
   transition: 1s ease-in;
 }
 
+@media screen and (min-width: 1440px) {
+  .work .projects {
+    margin-top: 15vh !important;
+    height: 85dvh !important;
+  }
+}
+
 .slide {
   /* background-color: rgb(42, 37, 61) !important; */
 }
