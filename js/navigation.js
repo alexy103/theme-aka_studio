@@ -237,6 +237,9 @@ navigationLogo.addEventListener("click", () => {
     handleAkas(contactAkas, "right");
     handleAkas(aboutAkas, "down");
     updateSlide("home");
+    setTimeout(() => {
+      aboutSlide.classList.remove("about--inside");
+    }, 2900);
   }
 });
 
