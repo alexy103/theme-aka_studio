@@ -1,26 +1,23 @@
 <?php
 
 // Activer la gestion du <title> par WordPress
-add_action('after_setup_theme', function ()
-{
+add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
 });
 
-add_action('wp_enqueue_scripts', function ()
-{
-    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=83899154352445');
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('aka-style', get_template_directory_uri() . '/css/style.css?version=838995154352445');
 });
 
-add_action('wp_enqueue_scripts', function ()
-{
-    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6839368886.js', [], null, true);
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/68397368886.js', [], null, true);
 
     $theme_js_path = get_template_directory_uri() . '/js/';
 
     wp_enqueue_script('theme-index', $theme_js_path . 'index.js', [], null, true);
     wp_enqueue_script('theme-menu', $theme_js_path . 'menu.js?version=845', [], null, true);
-    wp_enqueue_script('theme-navigation', $theme_js_path . 'navigation.js?version=8651554541552555326145415', [], null, true);
+    wp_enqueue_script('theme-navigation', $theme_js_path . 'navigation.js?version=86515545411552555326145415', [], null, true);
     wp_enqueue_script('theme-about', $theme_js_path . 'about.js', [], null, true);
     wp_enqueue_script('theme-work', $theme_js_path . 'work.js', [], null, true);
     wp_enqueue_script('theme-contact', $theme_js_path . 'contact.js', [], null, true);
@@ -29,8 +26,7 @@ add_action('wp_enqueue_scripts', function ()
 });
 
 // CPT pour les projets
-add_action('init', function ()
-{
+add_action('init', function () {
     register_post_type('projet', [
         'labels' => [
             'name' => 'WORK-Projets',
@@ -43,8 +39,7 @@ add_action('init', function ()
 });
 
 // Taxonomie pour classer les projets
-add_action('init', function ()
-{
+add_action('init', function () {
     register_taxonomy('projet_cat', ['projet'], [
         'labels' => [
             'name' => 'Catégories de projets',
@@ -59,8 +54,7 @@ add_action('init', function ()
 });
 
 // Champs ACF pour le CPT "projet"
-add_action('acf/init', function ()
-{
+add_action('acf/init', function () {
     if (!function_exists('acf_add_local_field_group'))
         return;
 
@@ -117,8 +111,7 @@ add_action('acf/init', function ()
 });
 
 // CPT pour les avis
-add_action('init', function ()
-{
+add_action('init', function () {
     register_post_type('avis', [
         'labels' => [
             'name' => 'Avis',
@@ -131,8 +124,7 @@ add_action('init', function ()
 });
 
 // Champs ACF pour le CPT "avis"
-add_action('acf/init', function ()
-{
+add_action('acf/init', function () {
     if (!function_exists('acf_add_local_field_group'))
         return;
 
@@ -165,8 +157,7 @@ add_action('acf/init', function ()
 });
 
 // CPT pour les friends
-add_action('init', function ()
-{
+add_action('init', function () {
     register_post_type('friends', [
         'labels' => [
             'name' => 'Réseau',
@@ -179,8 +170,7 @@ add_action('init', function ()
 });
 
 // Taxonomie pour classer les friends
-add_action('init', function ()
-{
+add_action('init', function () {
     register_taxonomy('friends_cat', ['friends'], [
         'labels' => [
             'name' => 'Type de réseau',
@@ -195,8 +185,7 @@ add_action('init', function ()
 });
 
 // Champs ACF pour le CPT "friends"
-add_action('acf/init', function ()
-{
+add_action('acf/init', function () {
     if (!function_exists('acf_add_local_field_group'))
         return;
 
