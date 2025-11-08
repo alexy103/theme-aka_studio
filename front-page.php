@@ -234,17 +234,13 @@
         </div>
         <div class="content hidden content--friends">
             <h3 class="content__title">
-                <?php
-                $about = get_field('about');
-                $friends_title = (is_array($about) && !empty($about['friends-title'])) ? $about['friends-title'] : '';
-
-                if ($friends_title !== '' && str_contains($friends_title, "!")): ?>
+                <?php $friends_title = get_field('about')['friends-title']; ?>
+                <?php if (str_contains(get_field('about')['friends-title'], "!")): ?>
                     <?= str_replace('!', '<span class="red">!</span>', $friends_title); ?>
                 <?php else: ?>
                     <?= $friends_title; ?>
                 <?php endif; ?>
             </h3>
-
             <p class="content__text">
                 <?= get_field('about')['friends-text'] ?>
             </p>
@@ -291,28 +287,25 @@
                                 $item_hidden = ($i > 0) ? ' hidden' : '';
                                 $link = get_field('link'); // ACF link (return_format: array)
                                 ?>
-                                <figure class="friend">
-                                    <?php
-                                    // CHANGÉ: on évite l'accès ['url'] sur null
-                                    $link = get_field('link'); // même variable logique
-                                    $img_url = wp_get_attachment_image_url(get_field('image'), 'full'); // CHANGÉ: on stocke pour tester
-                                    $href = (is_array($link) && !empty($link['url'])) ? esc_url($link['url']) : null;
-                                    ?>
+                                <figure class="friend<?= $item_hidden; ?>">
+                                    <div class="slider">
+                                        <i class="fa-solid fa-chevron-left"></i>
 
-                                    <?php if ($href): ?>
-                                        <a href="<?= $href; ?>">
-                                            <?php if ($img_url): ?><img src="<?= esc_url($img_url); ?>" alt=""><?php endif; ?>
-                                        </a>
-                                    <?php else: ?>
-                                        <?php if ($img_url): ?><img src="<?= esc_url($img_url); ?>" alt=""><?php endif; ?>
-                                    <?php endif; ?>
+                                        <?php if (!empty($link['url'])): ?>
+                                            <a href="<?= esc_url($link['url']); ?>">
+                                                <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full'); ?>" alt="">
+                                            </a>
+                                        <?php else: ?>
+                                            <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full'); ?>" alt="">
+                                        <?php endif; ?>
 
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
                                     <figcaption class="friend__description">
                                         <h4 class="name"><?= esc_html(get_the_title()); ?></h4>
                                         <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
                                     </figcaption>
                                 </figure>
-
                                 <?php
                                 $i++;
                             endwhile;
@@ -381,7 +374,6 @@
                 endforeach;
             endif;
             ?>
-
         </div>
 
         <div class="menus menus--single">
