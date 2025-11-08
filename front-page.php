@@ -377,7 +377,7 @@
 
         </div>
 
-        <div class="menus menus--single">
+        <!-- <div class="menus menus--single">
             <?php
             // 2) PAS de 2e get_terms différent : on réutilise l'exact même ordre
             $jobs_terms = $terms; // ← CHANGEMENT: on reprend les mêmes termes/ordre
@@ -404,7 +404,7 @@
                     <p>Réseau</p>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
         <?php
         // 2) PAS de 2e get_terms différent : on réutilise l'exact même ordre
