@@ -232,7 +232,157 @@
                 </div>
             </div>
         </div>
+        <div class="content hidden content--friends">
+            <h3 class="content__title">
+                <?php
+                $about = get_field('about');
+                $friends_title = (is_array($about) && !empty($about['friends-title'])) ? $about['friends-title'] : '';
 
+                if ($friends_title !== '' && str_contains($friends_title, "!")): ?>
+                    <?= str_replace('!', '<span class="red">!</span>', $friends_title); ?>
+                <?php else: ?>
+                    <?= $friends_title; ?>
+                <?php endif; ?>
+            </h3>
+
+            <p class="content__text">
+                <?= get_field('about')['friends-text'] ?>
+            </p>
+            <?php
+            // Réutilise $terms si déjà défini plus haut, sinon on le charge avec les mêmes options
+            if (!isset($terms) || is_wp_error($terms))
+            {
+                $terms = get_terms([
+                    'taxonomy' => 'friends_cat',
+                    'hide_empty' => true,
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                ]);
+            }
+
+            if (!is_wp_error($terms) && !empty($terms)):
+                $t_i = 0;
+                foreach ($terms as $term):
+                    // Premier .friendlist visible, suivants hidden
+                    $hidden_class = ($t_i > 0) ? ' hidden' : '';
+                    ?>
+                    <div class="friendlist<?= $hidden_class; ?>">
+                        <?php
+                        $q = new WP_Query([
+                            'post_type' => 'friends',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 3,
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'tax_query' => [
+                                [
+                                    'taxonomy' => 'friends_cat',
+                                    'field' => 'term_id',
+                                    'terms' => $term->term_id,
+                                ]
+                            ],
+                        ]);
+
+                        $i = 0;
+                        if ($q->have_posts()):
+                            while ($q->have_posts()):
+                                $q->the_post();
+                                // 1er figure visible, suivants hidden
+                                $item_hidden = ($i > 0) ? ' hidden' : '';
+                                $link = get_field('link'); // ACF link (return_format: array)
+                                ?>
+                                <figure class="friend">
+                                    <?php
+                                    // CHANGÉ: on évite l'accès ['url'] sur null
+                                    $link = get_field('link'); // même variable logique
+                                    $img_url = wp_get_attachment_image_url(get_field('image'), 'full'); // CHANGÉ: on stocke pour tester
+                                    $href = (is_array($link) && !empty($link['url'])) ? esc_url($link['url']) : null;
+                                    ?>
+
+                                    <?php if ($href): ?>
+                                        <a href="<?= $href; ?>">
+                                            <?php if ($img_url): ?><img src="<?= esc_url($img_url); ?>" alt=""><?php endif; ?>
+                                        </a>
+                                    <?php else: ?>
+                                        <?php if ($img_url): ?><img src="<?= esc_url($img_url); ?>" alt=""><?php endif; ?>
+                                    <?php endif; ?>
+
+                                    <figcaption class="friend__description">
+                                        <h4 class="name"><?= esc_html(get_the_title()); ?></h4>
+                                        <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
+                                    </figcaption>
+                                </figure>
+
+                                <?php
+                                $i++;
+                            endwhile;
+                            wp_reset_postdata();
+                        endif;
+                        ?>
+                    </div>
+                    <?php
+                    $t_i++;
+                endforeach;
+            endif;
+            ?>
+
+
+            <?php
+            // 1) Un seul get_terms pour TOUT (listes + menu), mêmes options que le menu
+            $terms = get_terms([
+                'taxonomy' => 'friends_cat',
+                'hide_empty' => true,   // ← CHANGÉ (avant: false)
+                'orderby' => 'name',
+                'order' => 'ASC',  // ← CHANGÉ (avant: DESC)
+            ]);
+
+            if (!is_wp_error($terms) && !empty($terms)):
+                $t_i = 0;
+                foreach ($terms as $term):
+                    // Premier bloc visible, suivants masqués (même logique que ton HTML)
+                    $hidden_class = ($t_i > 0) ? ' hidden' : '';
+                    ?>
+                    <div class="friendlistDesktop<?= $hidden_class; ?>">
+                        <?php
+                        $q = new WP_Query([
+                            'post_type' => 'friends',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 3,
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'tax_query' => [
+                                [
+                                    'taxonomy' => 'friends_cat',
+                                    'field' => 'term_id',
+                                    'terms' => $term->term_id,
+                                ]
+                            ],
+                        ]);
+
+                        if ($q->have_posts()):
+                            while ($q->have_posts()):
+                                $q->the_post(); ?>
+                                <figure class="friend">
+                                    <a href="<?= esc_url(get_field('link')['url']); ?>">
+                                        <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
+                                    </a>
+                                    <figcaption class="friend__description">
+                                        <h4 class="name"><?= esc_html(get_the_title()); ?></h4>
+                                        <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
+                                    </figcaption>
+                                </figure>
+                                <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        endif; ?>
+                    </div>
+                    <?php
+                    $t_i++;
+                endforeach;
+            endif;
+            ?>
+
+        </div>
 
         <div class="menus menus--single">
             <?php
