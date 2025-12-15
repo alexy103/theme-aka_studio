@@ -11,7 +11,7 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/68397368886.js', [], null, true);
+    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6839368886.js', [], null, true);
 
     $theme_js_path = get_template_directory_uri() . '/js/';
 
