@@ -356,7 +356,7 @@
                             while ($q->have_posts()):
                                 $q->the_post(); ?>
                                 <figure class="friend">
-                                    <a href="<?= esc_url(get_field('link')['url']); ?>">
+                                    <a href="<?= esc_url(get_field('lien')); ?>">
                                         <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
                                     </a>
                                     <figcaption class="friend__description">
@@ -374,7 +374,6 @@
                 endforeach;
             endif;
             ?>
-
         </div>
 
         <div class="menus menus--single">
