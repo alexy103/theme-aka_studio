@@ -1562,7 +1562,8 @@ img {
 		align-items: flex-start;
 		justify-content: flex-start;
 		margin-left: calc(calc((100dvw - (11 * 20px)) / 12) + 20px);
-		gap: 0;
+		/* gap: 0; */
+		align-content: space-between;
 	}
 	.about .content--friends .friendlist {
 		display: none;
@@ -1571,6 +1572,7 @@ img {
 		display: flex;
 		flex: 100%;
 		width: calc(calc((100dvw - (11 * 20px)) / 12) * 6 + 100px);
+		justify-content: space-between;
 	}
 	.about .content--friends .friendlistDesktop .friend {
 		display: flex;
@@ -1599,9 +1601,10 @@ img {
 		text-align: center;
 	}
 	.about .content--friends .content__title {
-		width: calc(calc((100dvw - (11 * 20px)) / 12) * 3 + 40px);
+		/* width: calc(calc((100dvw - (11 * 20px)) / 12) * 3 + 40px); */
 		margin: 0 0 calc(calc((100dvh - (11 * 20px)) / 12) + 20px);
-		font-size: 4.5rem;
+		font-size: 4rem;
+		width: fit-content;
 	}
 	.about .content--friends .content__text {
 		width: calc(calc((100dvw - (11 * 20px)) / 12) * 3 + 40px);
