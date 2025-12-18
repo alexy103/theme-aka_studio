@@ -3273,6 +3273,9 @@ img {
 	.work .projects .project:nth-child(even) {
 		border-right: 1px solid #fcfbf5;
 	}
+	.work .projects > figure.project:nth-of-type(2) {
+		padding-top: 40px;
+	}
 	.category span.category--exit {
 		-webkit-animation: categorySlideToRight 1s forwards ease-in-out !important;
 		animation: categorySlideToRight 1s forwards ease-in-out !important;
