@@ -441,19 +441,19 @@
         <div class="content content--medias hidden">
             <ul class="medias">
                 <li class="media">
-                    <a href="<?= get_field('contact')['instagram']['link'] ?>">
+                    <a href="<?= get_field('contact')['instagram']['link'] ?>" target="_blanks">
                         <img src="<?= wp_get_attachment_image_url(get_field('contact')['instagram']['logo'], 'full') ?>"
                             alt="Instagram logo" />
                     </a>
                 </li>
                 <li class="media">
-                    <a href="<?= get_field('contact')['behance']['link'] ?>">
+                    <a href="<?= get_field('contact')['behance']['link'] ?>" target="_blanks">
                         <img src="<?= wp_get_attachment_image_url(get_field('contact')['behance']['logo'], 'full') ?>"
                             alt="Behance logo" />
                     </a>
                 </li>
                 <li class="media">
-                    <a href="<?= get_field('contact')['linkedin']['link'] ?>">
+                    <a href="<?= get_field('contact')['linkedin']['link'] ?>" target="_blank">
                         <img src="<?= wp_get_attachment_image_url(get_field('contact')['linkedin']['logo'], 'full') ?>"
                             alt="Linkedin logo" />
                     </a>
