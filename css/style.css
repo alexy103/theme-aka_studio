@@ -1580,9 +1580,12 @@ img {
 	}
 	.about .content--friends .friendlistDesktop .friend img {
 		height: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px);
+		width: 100%;
+		object-fit: cover;
 	}
 	.about .content--friends .friendlistDesktop .friend a {
 		cursor: pointer;
+		width: 100%;
 	}
 	.about .content--friends .friendlistDesktop .friend__description {
 		display: flex;
