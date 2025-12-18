@@ -1434,6 +1434,7 @@ img {
 	}
 	.about .content .content__img {
 		padding: 0;
+		flex: 1;
 		/* height: auto;
 		width: calc(calc((100dvh - (11 * 20px)) / 12) * 3); */
 	}
