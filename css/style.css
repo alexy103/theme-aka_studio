@@ -3263,7 +3263,7 @@ img {
 		max-width: 90%;
 		text-wrap: wrap;
 	}
-	.work .project__text:nth-child(odd) {
+	.work .projects .project:nth-child(odd) {
 		border-right: 1px solid #fcfbf5;
 	}
 	.category span.category--exit {
