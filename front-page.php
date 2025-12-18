@@ -79,10 +79,10 @@
                             $content = get_the_content();
 
                             // Champs ACF
-                            $img_id = get_field('image');   // return_format = 'id'
+                            $img_id = get_field('image');
                             $link = get_field('lien');
                             $client = get_field('client');
-                            $date = get_field('date');    // date_picker
+                            $date = get_field('date');
                             $fonction = get_field('fonction');
                             ?>
                             <figure class="project">
@@ -120,7 +120,7 @@
 
                     <?php
                     wp_reset_postdata();
-                    $first = false; // on ne bascule qu’après avoir effectivement rendu une section
+                    $first = false;
                     ?>
                 <?php endif; ?>
 
@@ -194,7 +194,7 @@
                                 </div>
                                 <h4 class="opinion__title"><?= esc_html(get_the_title()); ?></h4>
                             </figure>
-                            <?php
+                        <?php
                             $i++;
                         endwhile;
                         wp_reset_postdata(); ?>
@@ -224,7 +224,7 @@
                                     <p class="opinion__text"><?= wp_kses_post(get_the_content()); ?></p>
                                 </figcaption>
                             </figure>
-                            <?php
+                        <?php
                             $i++;
                         endwhile;
                         wp_reset_postdata(); ?>
@@ -246,8 +246,7 @@
             </p>
             <?php
             // Réutilise $terms si déjà défini plus haut, sinon on le charge avec les mêmes options
-            if (!isset($terms) || is_wp_error($terms))
-            {
+            if (!isset($terms) || is_wp_error($terms)) {
                 $terms = get_terms([
                     'taxonomy' => 'friends_cat',
                     'hide_empty' => true,
@@ -261,7 +260,7 @@
                 foreach ($terms as $term):
                     // Premier .friendlist visible, suivants hidden
                     $hidden_class = ($t_i > 0) ? ' hidden' : '';
-                    ?>
+            ?>
                     <div class="friendlist<?= $hidden_class; ?>">
                         <?php
                         $q = new WP_Query([
@@ -286,7 +285,7 @@
                                 // 1er figure visible, suivants hidden
                                 $item_hidden = ($i > 0) ? ' hidden' : '';
                                 $link = get_field('link'); // ACF link (return_format: array)
-                                ?>
+                        ?>
                                 <figure class="friend<?= $item_hidden; ?>">
                                     <div class="slider">
                                         <i class="fa-solid fa-chevron-left"></i>
@@ -306,14 +305,14 @@
                                         <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
                                     </figcaption>
                                 </figure>
-                                <?php
+                        <?php
                                 $i++;
                             endwhile;
                             wp_reset_postdata();
                         endif;
                         ?>
                     </div>
-                    <?php
+            <?php
                     $t_i++;
                 endforeach;
             endif;
@@ -334,7 +333,7 @@
                 foreach ($terms as $term):
                     // Premier bloc visible, suivants masqués (même logique que ton HTML)
                     $hidden_class = ($t_i > 0) ? ' hidden' : '';
-                    ?>
+            ?>
                     <div class="friendlistDesktop<?= $hidden_class; ?>">
                         <?php
                         $q = new WP_Query([
@@ -364,12 +363,12 @@
                                         <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
                                     </figcaption>
                                 </figure>
-                                <?php
+                        <?php
                             endwhile;
                             wp_reset_postdata();
                         endif; ?>
                     </div>
-                    <?php
+            <?php
                     $t_i++;
                 endforeach;
             endif;
@@ -380,7 +379,7 @@
             <?php
             // 2) PAS de 2e get_terms différent : on réutilise l'exact même ordre
             $jobs_terms = $terms; // ← CHANGEMENT: on reprend les mêmes termes/ordre
-            
+
             if (!is_wp_error($jobs_terms) && !empty($jobs_terms)): ?>
                 <ul class="jobs submenu hidden">
                     <?php $first = true; ?>
@@ -408,7 +407,7 @@
         <?php
         // 2) PAS de 2e get_terms différent : on réutilise l'exact même ordre
         $jobs_terms = $terms; // ← CHANGEMENT: on reprend les mêmes termes/ordre
-        
+
         if (!is_wp_error($jobs_terms) && !empty($jobs_terms)): ?>
             <ul class="jobsDesktop submenu hidden">
                 <?php $first = true; ?>
@@ -473,9 +472,9 @@
 
 
             <script>
-                setTimeout(function () {
-                    document.querySelectorAll('.content--form form').forEach(function (form) {
-                        form.addEventListener('reset', function (e) {
+                setTimeout(function() {
+                    document.querySelectorAll('.content--form form').forEach(function(form) {
+                        form.addEventListener('reset', function(e) {
                             e.preventDefault();
                             console.log(document.querySelectorAll('.content--form form'));
                         });
