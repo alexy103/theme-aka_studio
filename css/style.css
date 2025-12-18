@@ -1596,10 +1596,10 @@ img {
 	}
 	.about .content--friends .friendlistDesktop .friend__description .name {
 		margin: 20px 0 40px;
+		font-family: 'Now Black', sans-serif;
 	}
 	.about .content--friends .friendlistDesktop .friend__description .text {
 		text-align: center;
-		font-family: 'Now Black', sans-serif;
 	}
 	.about .content--friends .content__title {
 		/* width: calc(calc((100dvw - (11 * 20px)) / 12) * 3 + 40px); */
