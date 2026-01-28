@@ -1586,6 +1586,7 @@ img {
 		height: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px);
 		width: 100%;
 		object-fit: cover;
+		object-position: 0 -20px;
 	}
 	.about .content--friends .friendlistDesktop .friend a {
 		cursor: pointer;
