@@ -931,7 +931,7 @@ img {
 	width: 100vw;
 	white-space: nowrap;
 	overflow: scroll hidden;
-	max-height: calc((calc((100dvh - (5 * 20px)) / 6) + 40px) * 2);
+	height: calc((calc((100dvh - (5 * 20px)) / 6) + 40px) * 2);
 }
 
 .work .projects .project {
