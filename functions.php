@@ -206,7 +206,7 @@ add_action('acf/init', function () {
                 'label' => 'Lien',
                 'name' => 'link',
                 'type' => 'link',
-                'return_format' => 'array',
+                'return_format' => 'url',
             ],
 
         ],
