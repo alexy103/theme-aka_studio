@@ -355,9 +355,13 @@
                             while ($q->have_posts()):
                                 $q->the_post(); ?>
                                 <figure class="friend">
-                                    <a href="<?= esc_url(get_field('link')); ?>">
+                                    <?php if (isset(get_field('link'))): ?>
+                                        <a href="<?= esc_url(get_field('link')); ?>">
+                                            <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
+                                        </a>
+                                    <?php else: ?>
                                         <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
-                                    </a>
+                                    <?php endif; ?>
                                     <figcaption class="friend__description">
                                         <h4 class="name"><?= esc_html(get_the_title()); ?></h4>
                                         <p class="text"><?= wp_kses_post(get_the_content()); ?></p>
