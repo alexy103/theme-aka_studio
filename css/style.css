@@ -628,7 +628,9 @@ img {
 		bottom: -5px;
 		height: 2px;
 		background-color: #e41313;
-		transition: left 0.3s, width 0.3s;
+		transition:
+			left 0.3s,
+			width 0.3s;
 		pointer-events: none;
 	}
 	.reduceNavbar--enter {
@@ -1071,7 +1073,7 @@ img {
 	}
 	.work .projects .project__text {
 		width: 100%;
-		height: calc(calc((100dvh - (11 * 20px)) / 12) * 4 + 60px);
+		height: calc(calc((100dvh - (11 * 20px)) / 12) * 4 + 20px);
 	}
 	.work .projects .project__image {
 		width: 100%;
@@ -1928,8 +1930,12 @@ img {
 }
 
 .work--enter .workMenu {
-	-webkit-animation: workSlideFromBottom 2s, smallGap 1s 1s;
-	animation: workSlideFromBottom 2s, smallGap 1s 1s;
+	-webkit-animation:
+		workSlideFromBottom 2s,
+		smallGap 1s 1s;
+	animation:
+		workSlideFromBottom 2s,
+		smallGap 1s 1s;
 }
 
 .work--enter .red {
@@ -2053,8 +2059,12 @@ img {
 }
 
 .contact .content__title--enter {
-	-webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
-	animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
+	-webkit-animation:
+		contactSlideFromBottom 1s forwards,
+		fadeIn 1s forwards;
+	animation:
+		contactSlideFromBottom 1s forwards,
+		fadeIn 1s forwards;
 }
 
 .contact .content__text--exit {
@@ -2068,8 +2078,12 @@ img {
 }
 
 .contact .content--form .content__title--exit {
-	-webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
-	animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+	-webkit-animation:
+		slideToTop 1s forwards,
+		fadeOut 0.75s forwards;
+	animation:
+		slideToTop 1s forwards,
+		fadeOut 0.75s forwards;
 }
 
 .contact--enter {
@@ -2089,8 +2103,12 @@ img {
 }
 
 .contact--enter .contactMenu {
-	-webkit-animation: workSlideFromBottom 2s, mediumGap 1s 1s;
-	animation: workSlideFromBottom 2s, mediumGap 1s 1s;
+	-webkit-animation:
+		workSlideFromBottom 2s,
+		mediumGap 1s 1s;
+	animation:
+		workSlideFromBottom 2s,
+		mediumGap 1s 1s;
 }
 
 .contact--enter .content .subtitle {
@@ -2197,13 +2215,21 @@ img {
 }
 
 .about .content__img--enter--right {
-	-webkit-animation: aboutSlideFromRight 1s forwards, fadeIn 0.75s forwards;
-	animation: aboutSlideFromRight 1s forwards, fadeIn 0.75s forwards;
+	-webkit-animation:
+		aboutSlideFromRight 1s forwards,
+		fadeIn 0.75s forwards;
+	animation:
+		aboutSlideFromRight 1s forwards,
+		fadeIn 0.75s forwards;
 }
 
 .about .content__img--enter--left {
-	-webkit-animation: slideFromLeft 1s forwards, fadeIn 0.75s forwards;
-	animation: slideFromLeft 1s forwards, fadeIn 0.75s forwards;
+	-webkit-animation:
+		slideFromLeft 1s forwards,
+		fadeIn 0.75s forwards;
+	animation:
+		slideFromLeft 1s forwards,
+		fadeIn 0.75s forwards;
 }
 
 .about .content__text--exit {
@@ -2227,13 +2253,21 @@ img {
 }
 
 .about .friendlist--exit {
-	-webkit-animation: slideToTop 0.5s forwards, fadeOut 0.5s forwards;
-	animation: slideToTop 0.5s forwards, fadeOut 0.5s forwards;
+	-webkit-animation:
+		slideToTop 0.5s forwards,
+		fadeOut 0.5s forwards;
+	animation:
+		slideToTop 0.5s forwards,
+		fadeOut 0.5s forwards;
 }
 
 .about .friendlist--enter {
-	-webkit-animation: slideToTop 0.5s forwards reverse, fadeIn 0.5s forwards;
-	animation: slideToTop 0.5s forwards reverse, fadeIn 0.5s forwards;
+	-webkit-animation:
+		slideToTop 0.5s forwards reverse,
+		fadeIn 0.5s forwards;
+	animation:
+		slideToTop 0.5s forwards reverse,
+		fadeIn 0.5s forwards;
 }
 
 .about .opinions--exit--left {
@@ -3201,8 +3235,12 @@ img {
 		top: calc(-200dvh - calc((100dvh - (5 * 20px)) / 6));
 	}
 	.friendlist--enter {
-		-webkit-animation: friendlistSlideFromBottom 0.5s forwards, fadeIn 1s forwards !important;
-		animation: friendlistSlideFromBottom 0.5s forwards, fadeIn 1s forwards !important;
+		-webkit-animation:
+			friendlistSlideFromBottom 0.5s forwards,
+			fadeIn 1s forwards !important;
+		animation:
+			friendlistSlideFromBottom 0.5s forwards,
+			fadeIn 1s forwards !important;
 	}
 	.about .content__text--exit,
 	.about .content__title--exit {
@@ -3222,24 +3260,44 @@ img {
 		overflow: inherit;
 	}
 	.contact .content__title--exit {
-		-webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
-		animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+		-webkit-animation:
+			slideToTop 1s forwards,
+			fadeOut 0.75s forwards;
+		animation:
+			slideToTop 1s forwards,
+			fadeOut 0.75s forwards;
 	}
 	.contact .content__title--enter {
-		-webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
-		animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
+		-webkit-animation:
+			contactSlideFromBottom 1s forwards,
+			fadeIn 1s forwards;
+		animation:
+			contactSlideFromBottom 1s forwards,
+			fadeIn 1s forwards;
 	}
 	.contact .content__text--exit {
-		-webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
-		animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+		-webkit-animation:
+			slideToTop 1s forwards,
+			fadeOut 0.75s forwards;
+		animation:
+			slideToTop 1s forwards,
+			fadeOut 0.75s forwards;
 	}
 	.contact .content__text--enter {
-		-webkit-animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
-		animation: contactSlideFromBottom 1s forwards, fadeIn 1s forwards;
+		-webkit-animation:
+			contactSlideFromBottom 1s forwards,
+			fadeIn 1s forwards;
+		animation:
+			contactSlideFromBottom 1s forwards,
+			fadeIn 1s forwards;
 	}
 	.contact .content--form .content__title--exit {
-		-webkit-animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
-		animation: slideToTop 1s forwards, fadeOut 0.75s forwards;
+		-webkit-animation:
+			slideToTop 1s forwards,
+			fadeOut 0.75s forwards;
+		animation:
+			slideToTop 1s forwards,
+			fadeOut 0.75s forwards;
 	}
 	.work--enter .project {
 		transform: translateY(100vh);
@@ -3274,7 +3332,7 @@ img {
 		border-right: 1px solid #fcfbf5;
 	}
 	.work .projects > figure.project:nth-of-type(2) {
-		padding-top: 40px;
+		padding-top: 80px;
 	}
 	.category span.category--exit {
 		-webkit-animation: categorySlideToRight 1s forwards ease-in-out !important;
