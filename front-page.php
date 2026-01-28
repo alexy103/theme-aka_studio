@@ -355,7 +355,7 @@
                             while ($q->have_posts()):
                                 $q->the_post(); ?>
                                 <figure class="friend">
-                                    <?php if (isset(get_field('link'))): ?>
+                                    <?php if (!empty(get_field('link'))): ?>
                                         <a href="<?= esc_url(get_field('link')); ?>">
                                             <img src="<?= wp_get_attachment_image_url(get_field('image'), 'full') ?>" alt="">
                                         </a>
