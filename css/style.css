@@ -1580,7 +1580,7 @@ img {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: calc(calc((100dvw - (11 * 20px)) / 12) * 2 + 20px);
+		width: calc(calc((100dvw - (11 * 20px)) / 12) * 2);
 	}
 	.about .content--friends .friendlistDesktop .friend img {
 		height: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px);
