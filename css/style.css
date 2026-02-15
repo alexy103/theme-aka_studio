@@ -1583,7 +1583,7 @@ img {
 		width: calc(calc((100dvw - (11 * 20px)) / 12) * 2);
 	}
 	.about .content--friends .friendlistDesktop .friend img {
-		height: calc(calc((100dvh - (11 * 20px)) / 12) * 2 + 20px);
+		height: calc(calc((100dvh - (11 * 20px)) / 12) * 3 + 20px);
 		aspect-ratio: 1;
 		object-fit: cover;
 		object-position: 0 -20px;
